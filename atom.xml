@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-30T11:58:07.737Z</updated>
+  <updated>2019-01-30T14:12:17.362Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,25 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/01/30/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2#/"/>
-    <id>http://yoursite.com/2019/01/30/第一个博客#/</id>
-    <published>2019-01-30T05:34:25.064Z</published>
-    <updated>2019-01-30T11:58:07.737Z</updated>
+    <title>FirstPassage</title>
+    <link href="http://yoursite.com/2019/01/30/FirstPassage/"/>
+    <id>http://yoursite.com/2019/01/30/FirstPassage/</id>
+    <published>2019-01-30T13:27:27.000Z</published>
+    <updated>2019-01-30T14:12:17.362Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;title: # 第一个博客&lt;/p&gt;
-&lt;p&gt;categories: 练习一&lt;/p&gt;
-&lt;p&gt;hello
-        
-      
+      &lt;h1 id=&quot;这是第一篇博客文章&quot;&gt;&lt;a href=&quot;#这是第一篇博客文章&quot; class=&quot;headerlink&quot; title=&quot;这是第一篇博客文章&quot;&gt;&lt;/a&gt;这是第一篇博客文章&lt;/h1&gt;
     
     </summary>
+    
+      <category term="练习一" scheme="http://yoursite.com/categories/%E7%BB%83%E4%B9%A0%E4%B8%80/"/>
     
     
   </entry>
