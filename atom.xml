@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-19T06:17:07.547Z</updated>
+  <updated>2019-02-19T06:29:39.603Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown语法</title>
+    <link href="http://yoursite.com/2019/02/19/Markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/02/19/Markdown语法/</id>
+    <published>2019-02-19T06:24:53.000Z</published>
+    <updated>2019-02-19T06:29:39.603Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;br&gt;相比WYSIWYG编辑器&lt;br&gt;优点：&lt;br&gt;1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。&lt;br&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>access_token</title>
@@ -60,38 +84,6 @@
     </summary>
     
       <category term="爬虫" scheme="http://yoursite.com/categories/%E7%88%AC%E8%99%AB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>FirstPassage</title>
-    <link href="http://yoursite.com/2019/01/30/FirstPassage/"/>
-    <id>http://yoursite.com/2019/01/30/FirstPassage/</id>
-    <published>2019-01-30T13:27:27.000Z</published>
-    <updated>2019-01-31T04:50:19.589Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#&lt;center&gt; 这是第一篇博客文章&lt;/center&gt;&lt;br&gt;上世纪80年代，改革先锋项南去探望老帅聂荣臻。谈话间，聂帅跟他提起河北阜平县，一座当年晋察冀边区的革命老城。聂帅说：“老百姓保护了我们、养育了我们，我们打下了天下，是为老百姓打下的天下，阜平的乡亲们现在生活还没有明显改善，我于心不忍，一定要把老区的事情办好。”
-    
-    </summary>
-    
-      <category term="练习一" scheme="http://yoursite.com/categories/%E7%BB%83%E4%B9%A0%E4%B8%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>你好，Hexo</title>
-    <link href="http://yoursite.com/2019/01/30/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/"/>
-    <id>http://yoursite.com/2019/01/30/你好，Hexo/</id>
-    <published>2019-01-30T04:41:14.000Z</published>
-    <updated>2019-01-30T04:41:14.254Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
     
     
   </entry>
