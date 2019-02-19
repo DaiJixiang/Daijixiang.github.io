@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="#微信开发——网页授权access_token与全局access_token获取用户信息的接口 ##网页授权access_token 微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是">
+<meta name="description" content="微信开发——网页授权access_token与全局access_token获取用户信息的接口网页授权access_token微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是通过cod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信开发--网页授权access_token与全局access_token获取用户信息的接口">
 <meta property="og:url" content="http://yoursite.com/2019/02/19/微信开发-网页授权access-token与全局access-token获取用户信息的接口/index.html">
 <meta property="og:site_name" content="左岸de博客">
-<meta property="og:description" content="#微信开发——网页授权access_token与全局access_token获取用户信息的接口 ##网页授权access_token 微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是">
+<meta property="og:description" content="微信开发——网页授权access_token与全局access_token获取用户信息的接口网页授权access_token微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是通过cod">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-19T06:51:28.323Z">
+<meta property="og:updated_time" content="2019-02-19T06:53:31.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信开发--网页授权access_token与全局access_token获取用户信息的接口">
-<meta name="twitter:description" content="#微信开发——网页授权access_token与全局access_token获取用户信息的接口 ##网页授权access_token 微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是">
+<meta name="twitter:description" content="微信开发——网页授权access_token与全局access_token获取用户信息的接口网页授权access_token微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是通过cod">
 
 
 
@@ -377,14 +377,11 @@
       
 
       
-        <p>#微信开发——网页授权access_token与全局access_token获取用户信息的接口</p>
-<p>##网页授权access_token</p>
-<p>微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是通过code换取的凭证，用于获取用户的基本信息，次数不限，时间最长5分钟。</p>
-<p>获取网页授权access_token接口地址为：<a href="https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code</a></p>
-<p>获取code接口地址为:<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect</a></p>
-<p>获取用户信息接口:<a href="https://api.weixin.qq.com/sns/userinfo?access_token={0}&amp;openid={1}&amp;lang=zh_CN" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/userinfo?access_token={0}&amp;openid={1}&amp;lang=zh_CN</a></p>
-<p>##全局access_token</p>
-<p>其他微信接口需要通过基础支持中的“获取access_token”接口来获取到的全局access_token调用。全局access_token是HTML5网页调用基础接口的全局唯一凭证，有效时间为2小时，每天最多调用2000次。</p>
+        <h1 id="微信开发——网页授权access-token与全局access-token获取用户信息的接口"><a href="#微信开发——网页授权access-token与全局access-token获取用户信息的接口" class="headerlink" title="微信开发——网页授权access_token与全局access_token获取用户信息的接口"></a>微信开发——网页授权access_token与全局access_token获取用户信息的接口</h1><h2 id="网页授权access-token"><a href="#网页授权access-token" class="headerlink" title="网页授权access_token"></a>网页授权access_token</h2><p>微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是通过code换取的凭证，用于获取用户的基本信息，次数不限，时间最长5分钟。</p>
+<p>获取网页授权access_token接口地址为：<br><a href="https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code</a></p>
+<p>获取code接口地址为:<br><a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect</a></p>
+<p>获取用户信息接口:<br><a href="https://api.weixin.qq.com/sns/userinfo?access_token={0}&amp;openid={1}&amp;lang=zh_CN" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/userinfo?access_token={0}&amp;openid={1}&amp;lang=zh_CN</a></p>
+<h2 id="全局access-token"><a href="#全局access-token" class="headerlink" title="全局access_token"></a>全局access_token</h2><p>其他微信接口需要通过基础支持中的“获取access_token”接口来获取到的全局access_token调用。全局access_token是HTML5网页调用基础接口的全局唯一凭证，有效时间为2小时，每天最多调用2000次。</p>
 <p>获取全局access_token接口地址为：<br><a href="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET</a></p>
 <p>获取用户OpenID接口地址：<br><a href="https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token=ACCESS_TOKEN" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token=ACCESS_TOKEN</a></p>
 <p>如果想用这个全局access_token获取用户信息，那么要求用户已经关注了你的公众号。此时才能根据用户的OpenID来获取用户的基本信息。</p>
@@ -472,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -558,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微信开发——网页授权access-token与全局access-token获取用户信息的接口"><span class="nav-number">1.</span> <span class="nav-text">微信开发——网页授权access_token与全局access_token获取用户信息的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网页授权access-token"><span class="nav-number">1.1.</span> <span class="nav-text">网页授权access_token</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局access-token"><span class="nav-number">1.2.</span> <span class="nav-text">全局access_token</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
