@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-01T08:08:20.199Z</updated>
+  <updated>2019-02-19T06:17:07.547Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>access_token</title>
+    <link href="http://yoursite.com/2019/02/19/access-token/"/>
+    <id>http://yoursite.com/2019/02/19/access-token/</id>
+    <published>2019-02-19T06:14:44.000Z</published>
+    <updated>2019-02-19T06:17:07.547Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;em&gt;微信公众号之access_token获取与管理&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;转自：&lt;a href=&quot;https://www.cnblogs.com/fengzheng/p/5027630.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>scrpy使用方法</title>
