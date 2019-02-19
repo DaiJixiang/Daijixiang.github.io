@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>微信开发--网页授权access_token与全局access_token获取用户信息的接口</title>
+      <link href="/2019/02/19/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83access-token%E4%B8%8E%E5%85%A8%E5%B1%80access-token%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9A%84%E6%8E%A5%E5%8F%A3/"/>
+      <url>/2019/02/19/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83access-token%E4%B8%8E%E5%85%A8%E5%B1%80access-token%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9A%84%E6%8E%A5%E5%8F%A3/</url>
+      
+        <content type="html"><![CDATA[<p>#微信开发——网页授权access_token与全局access_token获取用户信息的接口</p><p>##网页授权access_token</p><p>微信网页授权是通过OAuth2.0机制实现的。在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证——网页授权access_token。通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息。网页授权access_token是通过code换取的凭证，用于获取用户的基本信息，次数不限，时间最长5分钟。</p><p>获取网页授权access_token接口地址为：<a href="https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code</a></p><p>获取code接口地址为:<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect" target="_blank" rel="noopener">https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect</a></p><p>获取用户信息接口:<a href="https://api.weixin.qq.com/sns/userinfo?access_token={0}&amp;openid={1}&amp;lang=zh_CN" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/userinfo?access_token={0}&amp;openid={1}&amp;lang=zh_CN</a></p><p>##全局access_token</p><p>其他微信接口需要通过基础支持中的“获取access_token”接口来获取到的全局access_token调用。全局access_token是HTML5网页调用基础接口的全局唯一凭证，有效时间为2小时，每天最多调用2000次。</p><p>获取全局access_token接口地址为：<br><a href="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=APPID&amp;secret=APPSECRET</a></p><p>获取用户OpenID接口地址：<br><a href="https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token=ACCESS_TOKEN" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token=ACCESS_TOKEN</a></p><p>如果想用这个全局access_token获取用户信息，那么要求用户已经关注了你的公众号。此时才能根据用户的OpenID来获取用户的基本信息。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java-access_token </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown语法</title>
       <link href="/2019/02/19/Markdown%E8%AF%AD%E6%B3%95/"/>
       <url>/2019/02/19/Markdown%E8%AF%AD%E6%B3%95/</url>
@@ -38,7 +57,7 @@
       
       <categories>
           
-          <category> java </category>
+          <category> java-access_token </category>
           
       </categories>
       
