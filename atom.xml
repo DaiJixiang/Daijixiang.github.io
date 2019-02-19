@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-19T07:41:24.458Z</updated>
+  <updated>2019-02-19T08:00:30.021Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA手动配置连接MySQL数据库</title>
+    <link href="http://yoursite.com/2019/02/19/IDEA%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AE%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://yoursite.com/2019/02/19/IDEA手动配置连接MySQL数据库/</id>
+    <published>2019-02-19T07:54:29.000Z</published>
+    <updated>2019-02-19T08:00:30.021Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;IntelliJ-IDEA手动配置连接MySQL数据库&quot;&gt;&lt;a href=&quot;#IntelliJ-IDEA手动配置连接MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;IntelliJ
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>JSP 连接数据库</title>
