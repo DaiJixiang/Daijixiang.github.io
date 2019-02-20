@@ -415,7 +415,7 @@
       
 
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Arrays;</span><br><span class="line"> </span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.LinkedList;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.Queue;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line">import java.util.Stack;</span><br><span class="line">class p&#123;</span><br><span class="line">	int x,y;</span><br><span class="line">&#125;</span><br><span class="line">public class Main1 &#123;</span><br><span class="line">	static Scanner in=new Scanner(System.in); </span><br><span class="line">    </span><br><span class="line">	public static  void main(String[] args) &#123;</span><br><span class="line">		int n=in.nextInt();</span><br><span class="line">		p a=new p();</span><br><span class="line">		a.x=10;</span><br><span class="line">		p[] b=new p[100];</span><br><span class="line">		for(int i=0;i&lt;100;i++)&#123;//一定要加入这一句</span><br><span class="line">			b[i]=new p();</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">			b[i].x=1;</span><br><span class="line">			b[i].y=2;</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=0;i&lt;n;i++)&#123;</span><br><span class="line">			System.out.println(b[i].x+b[i].y);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.Arrays;</span></span><br><span class="line"> </span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.HashMap;</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.LinkedList;</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.Map;</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.Queue;</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.Scanner;</span></span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> java.util.Stack;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">p</span></span>&#123;</span><br><span class="line">	int x,y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main1</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> Scanner <span class="keyword">in</span>=<span class="keyword">new</span> Scanner(System.in); </span><br><span class="line">    </span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> main(String[] args) &#123;</span><br><span class="line">		int n=<span class="keyword">in</span>.nextInt();</span><br><span class="line">		p a=<span class="keyword">new</span> p();</span><br><span class="line">		a.x=<span class="number">10</span>;</span><br><span class="line">		p[] b=<span class="keyword">new</span> p[<span class="number">100</span>];</span><br><span class="line">		<span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;<span class="comment">//一定要加入这一句</span></span><br><span class="line">			b[i]=<span class="keyword">new</span> p();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">			b[i].x=<span class="number">1</span>;</span><br><span class="line">			b[i].y=<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">			System.out.println(b[i].x+b[i].y);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -521,7 +521,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -531,10 +531,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
+                
                   <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
-                </a>
+                
               </div>
             
 
@@ -542,10 +542,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
+                
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                </a>
+                
               </div>
             
 
@@ -634,7 +634,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.4k字</span>
+  <span class="post-count">博客全站共9.1k字</span>
 </div>
 
 
