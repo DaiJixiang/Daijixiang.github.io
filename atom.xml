@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-19T08:34:02.484Z</updated>
+  <updated>2019-02-20T01:25:56.640Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>text</title>
-    <link href="http://yoursite.com/2019/02/19/text/"/>
-    <id>http://yoursite.com/2019/02/19/text/</id>
-    <published>2019-02-19T08:33:30.000Z</published>
-    <updated>2019-02-19T08:34:02.484Z</updated>
+    <title>java实现遍历一个字符串的每一个字母</title>
+    <link href="http://yoursite.com/2019/02/20/java%E5%AE%9E%E7%8E%B0%E9%81%8D%E5%8E%86%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%AF%8F%E4%B8%80%E4%B8%AA%E5%AD%97%E6%AF%8D/"/>
+    <id>http://yoursite.com/2019/02/20/java实现遍历一个字符串的每一个字母/</id>
+    <published>2019-02-20T01:19:07.000Z</published>
+    <updated>2019-02-20T01:25:56.640Z</updated>
     
     <summary type="html">
     
@@ -29,11 +29,13 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/02/19/5c6bbf0d937d8.jpg&quot;
+          &lt;h1 id=&quot;求字符串中a字符出现的次数&quot;&gt;&lt;a href=&quot;#求字符串中a字符出现的次数&quot; class=&quot;headerlink&quot; title=&quot;求字符串中a字符出现的次数&quot;&gt;&lt;/a&gt;求字符串中a字符出现的次数&lt;/h1&gt;&lt;figure class=&quot;highlight
         
       
     
     </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
   </entry>
