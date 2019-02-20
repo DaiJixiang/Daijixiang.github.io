@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-20T07:32:31.764Z</updated>
+  <updated>2019-02-20T08:10:18.083Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python实现结构体数组（初始化并赋值）</title>
-    <link href="http://yoursite.com/2019/02/20/python%E5%AE%9E%E7%8E%B0%E7%BB%93%E6%9E%84%E4%BD%93%E6%95%B0%E7%BB%84%EF%BC%88%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B9%B6%E8%B5%8B%E5%80%BC%EF%BC%89/"/>
-    <id>http://yoursite.com/2019/02/20/python实现结构体数组（初始化并赋值）/</id>
-    <published>2019-02-20T07:22:46.000Z</published>
-    <updated>2019-02-20T07:32:31.764Z</updated>
+    <title>python虚拟路径</title>
+    <link href="http://yoursite.com/2019/02/20/python%E8%99%9A%E6%8B%9F%E8%B7%AF%E5%BE%84/"/>
+    <id>http://yoursite.com/2019/02/20/python虚拟路径/</id>
+    <published>2019-02-20T08:07:56.000Z</published>
+    <updated>2019-02-20T08:10:18.083Z</updated>
     
     <summary type="html">
     
@@ -29,233 +29,13 @@
       
         
         
-          &lt;h1 id=&quot;python中结构体数组构建方法&quot;&gt;&lt;a href=&quot;#python中结构体数组构建方法&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;Python-和虚拟路径有关的方法&quot;&gt;&lt;a href=&quot;#Python-和虚拟路径有关的方法&quot; class=&quot;headerlink&quot; title=&quot;Python 和虚拟路径有关的方法&quot;&gt;&lt;/a&gt;Python 和虚拟路径有关的方法&lt;/h1&gt;&lt;p&gt;&lt;img
         
       
     
     </summary>
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java实现结构体数组</title>
-    <link href="http://yoursite.com/2019/02/20/java%E5%AE%9E%E7%8E%B0%E7%BB%93%E6%9E%84%E4%BD%93%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2019/02/20/java实现结构体数组/</id>
-    <published>2019-02-20T06:41:00.000Z</published>
-    <updated>2019-02-20T06:42:33.395Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java实现遍历一个字符串的每一个字母</title>
-    <link href="http://yoursite.com/2019/02/20/java%E5%AE%9E%E7%8E%B0%E9%81%8D%E5%8E%86%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%AF%8F%E4%B8%80%E4%B8%AA%E5%AD%97%E6%AF%8D/"/>
-    <id>http://yoursite.com/2019/02/20/java实现遍历一个字符串的每一个字母/</id>
-    <published>2019-02-20T01:19:07.000Z</published>
-    <updated>2019-02-20T01:28:41.149Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;求字符串中a字符出现的次数&quot;&gt;&lt;a href=&quot;#求字符串中a字符出现的次数&quot; class=&quot;headerlink&quot; title=&quot;求字符串中a字符出现的次数&quot;&gt;&lt;/a&gt;求字符串中a字符出现的次数&lt;/h1&gt;&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA手动配置连接MySQL数据库</title>
-    <link href="http://yoursite.com/2019/02/19/IDEA%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AE%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://yoursite.com/2019/02/19/IDEA手动配置连接MySQL数据库/</id>
-    <published>2019-02-19T07:54:29.000Z</published>
-    <updated>2019-02-20T02:49:51.175Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;IntelliJ-IDEA手动配置连接MySQL数据库&quot;&gt;&lt;a href=&quot;#IntelliJ-IDEA手动配置连接MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;IntelliJ
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JSP 连接数据库</title>
-    <link href="http://yoursite.com/2019/02/19/JSP-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://yoursite.com/2019/02/19/JSP-连接数据库/</id>
-    <published>2019-02-19T07:33:18.000Z</published>
-    <updated>2019-02-19T07:41:24.458Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;JSP连接数据库&quot;&gt;&lt;a href=&quot;#JSP连接数据库&quot; class=&quot;headerlink&quot; title=&quot;JSP连接数据库&quot;&gt;&lt;/a&gt;JSP连接数据库&lt;/h1&gt;&lt;p&gt;本教程假定您已经了解了 JDBC 应用程序的工作方式。在您开始学习 JSP
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>微信开发--网页授权access_token与全局access_token获取用户信息的接口</title>
-    <link href="http://yoursite.com/2019/02/19/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83access-token%E4%B8%8E%E5%85%A8%E5%B1%80access-token%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9A%84%E6%8E%A5%E5%8F%A3/"/>
-    <id>http://yoursite.com/2019/02/19/微信开发-网页授权access-token与全局access-token获取用户信息的接口/</id>
-    <published>2019-02-19T06:46:15.000Z</published>
-    <updated>2019-02-19T06:53:31.532Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;微信开发——网页授权access-token与全局access-token获取用户信息的接口&quot;&gt;&lt;a href=&quot;#微信开发——网页授权access-token与全局access-token获取用户信息的接口&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java-access_token" scheme="http://yoursite.com/categories/java-access-token/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown语法</title>
-    <link href="http://yoursite.com/2019/02/19/Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/02/19/Markdown语法/</id>
-    <published>2019-02-19T06:24:53.000Z</published>
-    <updated>2019-02-19T06:33:07.533Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;br&gt;相比WYSIWYG编辑器&lt;br&gt;优点：&lt;br&gt;1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。&lt;br&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="基础" scheme="http://yoursite.com/categories/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>access_token</title>
-    <link href="http://yoursite.com/2019/02/19/access-token/"/>
-    <id>http://yoursite.com/2019/02/19/access-token/</id>
-    <published>2019-02-19T06:14:44.000Z</published>
-    <updated>2019-02-19T06:51:26.304Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;em&gt;微信公众号之access_token获取与管理&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;转自：&lt;a href=&quot;https://www.cnblogs.com/fengzheng/p/5027630.html&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java-access_token" scheme="http://yoursite.com/categories/java-access-token/"/>
-    
-    
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scrpy使用方法</title>
-    <link href="http://yoursite.com/2019/02/01/scrapy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/02/01/scrapy使用方法/</id>
-    <published>2019-02-01T08:03:33.000Z</published>
-    <updated>2019-02-01T08:08:20.199Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Scrapy教程&lt;/p&gt;
-&lt;p&gt;将要抓取
-        
-      
-    
-    </summary>
-    
-      <category term="爬虫" scheme="http://yoursite.com/categories/%E7%88%AC%E8%99%AB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/01/30/hello-world/"/>
-    <id>http://yoursite.com/2019/01/30/hello-world/</id>
-    <published>2019-01-30T03:59:21.672Z</published>
-    <updated>2019-01-30T03:59:21.672Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
     
     
   </entry>
