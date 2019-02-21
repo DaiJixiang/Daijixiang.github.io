@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T01:38:18.852Z</updated>
+  <updated>2019-02-21T01:47:44.733Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 基本操作</title>
+    <link href="http://yoursite.com/2019/02/21/CentOS-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/02/21/CentOS-基本操作/</id>
+    <published>2019-02-21T01:41:11.000Z</published>
+    <updated>2019-02-21T01:47:44.733Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CentOS-基本操作&quot;&gt;&lt;a href=&quot;#CentOS-基本操作&quot; class=&quot;headerlink&quot; title=&quot;CentOS 基本操作&quot;&gt;&lt;/a&gt;&lt;center&gt;CentOS 基本操作&lt;/center&gt;&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>与Linux挂载有关知识</title>
