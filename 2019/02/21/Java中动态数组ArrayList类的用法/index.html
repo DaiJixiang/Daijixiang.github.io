@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="左岸de博客">
 <meta property="og:description" content="1、什么是ArrayListArrayList就是传说中的动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了如下一些好处：动态的增加和减少元素实现了ICollection和IList接口灵活的设置数组的大小 2、如何使用ArrayList最简单的例子：ArrayList List = new ArrayList();for( int i=0;i &amp;lt;10;i++ ) //给数组增">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-21T07:18:02.555Z">
+<meta property="og:updated_time" content="2019-02-21T13:01:30.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中动态数组ArrayList类的用法">
 <meta name="twitter:description" content="1、什么是ArrayListArrayList就是传说中的动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了如下一些好处：动态的增加和减少元素实现了ICollection和IList接口灵活的设置数组的大小 2、如何使用ArrayList最简单的例子：ArrayList List = new ArrayList();for( int i=0;i &amp;lt;10;i++ ) //给数组增">
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T15:18:02+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-21T21:01:30+08:00">
                 2019-02-21
               </time>
             
@@ -469,7 +469,7 @@
 <p>如果使用ArrayList.Synchronized方法返回的实例，那么就不用考虑线程同步的问题，这个实例本身就是线程安全的，实际上ArrayList内部实现了一个保证线程同步的内部类，ArrayList.Synchronized返回的就是这个类的实例，它里面的每个属性都是用了lock关键字来保证线程同步。</p>
 <h2 id="3）Count属性和Capacity属性"><a href="#3）Count属性和Capacity属性" class="headerlink" title="3）Count属性和Capacity属性"></a>3）Count属性和Capacity属性</h2><p>Count属性是目前ArrayList包含的元素的数量，这个属性是只读的。<br>Capacity属性是目前ArrayList能够包含的最大数量，可以手动的设置这个属性，但是当设置为小于Count值的时候会引发一个异常。</p>
 <h2 id="4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange"><a href="#4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange" class="headerlink" title="4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange"></a>4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange</h2><p>这几个方法比较类似<br>Add方法用于添加一个元素到当前列表的末尾<br>AddRange方法用于添加一批元素到当前列表的末尾<br>Remove方法用于删除一个元素，通过元素本身的引用来删除<br>RemoveAt方法用于删除一个元素，通过索引值来删除<br>RemoveRange用于删除一批元素，通过指定开始的索引和删除的数量来删除<br>Insert用于添加一个元素到指定位置，列表后面的元素依次往后移动<br>InsertRange用于从指定位置开始添加一批元素，列表后面的元素依次往后移动</p>
-<p>另外，还有几个类似的方法：<br>Clear方法用于清除现有所有的元素<br>Contains方法用来查找某个对象在不在列表之中</p>
+<p>另外，还有几个类似的方法：<br><strong>Clear方法用于清除现有所有的元素</strong> （2019-2-21标记）<br>Contains方法用来查找某个对象在不在列表之中</p>
 <p>其他的我就不一一累赘了，大家可以查看MSDN，上面讲的更仔细 </p>
 <h2 id="5）TrimSize方法"><a href="#5）TrimSize方法" class="headerlink" title="5）TrimSize方法"></a>5）TrimSize方法</h2><p>这个方法用于将ArrayList固定到实际元素的大小，当动态数组元素确定不在添加的时候，可以调用这个方法来释放空余的内存。<br>6）ToArray方法<br>这个方法把ArrayList的元素Copy到一个新的数组中。</p>
 <h1 id="4、ArrayList与数组转换"><a href="#4、ArrayList与数组转换" class="headerlink" title="4、ArrayList与数组转换"></a>4、ArrayList与数组转换</h1><h2 id="例1："><a href="#例1：" class="headerlink" title="例1："></a>例1：</h2><p>ArrayList List = new ArrayList();<br>List.Add(1);<br>List.Add(2);<br>List.Add(3);</p>
