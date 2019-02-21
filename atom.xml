@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T11:12:40.965Z</updated>
+  <updated>2019-02-21T13:15:08.947Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python中list的清空</title>
+    <link href="http://yoursite.com/2019/02/21/Python%E4%B8%ADlist%E7%9A%84%E6%B8%85%E7%A9%BA/"/>
+    <id>http://yoursite.com/2019/02/21/Python中list的清空/</id>
+    <published>2019-02-21T13:11:55.000Z</published>
+    <updated>2019-02-21T13:15:08.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;首先需要明确，在Python中，清空列表的操作有两类四种：&lt;/p&gt;
+&lt;h2 id=&quot;第一类，在非函数参数的list中，可以使用del-lst-new-或者list-new-来清空列表。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>java链表基本概念</title>
@@ -478,30 +503,6 @@
     
     
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scrpy使用方法</title>
-    <link href="http://yoursite.com/2019/02/01/scrapy%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/02/01/scrapy使用方法/</id>
-    <published>2019-02-01T08:03:33.000Z</published>
-    <updated>2019-02-20T08:25:47.781Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Scrapy教程center-gt&quot;&gt;&lt;a href=&quot;#Scrapy教程center-gt&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
     
   </entry>
   
