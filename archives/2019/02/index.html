@@ -797,6 +797,12 @@
           
           
 
+
+          <!-- CloudCalendar -->
+        <div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+        <div class="widget" id="CloudCalendar"></div>
+        </div>
+
           
 
         </div>
@@ -828,6 +834,15 @@
   </span>
   <span class="author" itemprop="copyrightHolder">DaiJixiang</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">11.8k</span>
   
 </div>
 
@@ -1362,9 +1377,27 @@
 
   
 
-
   <script type="text/javascript" src="/lib/zclip/clipboard.min.js"></script>	
 <script type="text/javascript" src="/js/src/custom.js"></script>
+  <!-- calendar widget -->
+
+    <script src="/lib/CloudCalendar.min.js"></script>
+    <script src="/lib/languages.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN', 
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/calendar/'
+                }
+            )
+        );
+    });
+    </script>
+
+
+
   <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>

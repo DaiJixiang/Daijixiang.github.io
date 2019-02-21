@@ -123,7 +123,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/02/21/5c6e02af79c46.png">
 <meta property="og:image" content="https://i.loli.net/2019/02/21/5c6e02af52444.png">
-<meta property="og:updated_time" content="2019-02-21T02:01:20.922Z">
+<meta property="og:updated_time" content="2019-02-21T02:06:54.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS 基本操作">
 <meta name="twitter:description" content="1.Vi 基本操作1) 进入vi 在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面： $ vi myfile 进入vi之后，是处于「命令行模式（command mode）」，您要切换到「插入模式（Insert mode）」才能够输入文字。 2) 切换至插入模式（Insert mode）编辑文件 在「命令行模式（command mode）」下按一下字母「i」就可以进入「插入模式（Inse">
@@ -402,6 +402,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  563 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
 
           
 
@@ -427,7 +458,7 @@
 <h3 id="2）安装图形界面"><a href="#2）安装图形界面" class="headerlink" title="2）安装图形界面"></a>2）安装图形界面</h3><p> 如果startx 命令不管用，说明没有安装图形界面，命令安装如下：(需要联网)<br> yum groupinstall “GNOME Desktop” “Graphical Administration Tools”</p>
 <h3 id="3）如果想开机直接进入“命令行模式”，可编辑-etc-inittab-文件，设置为-id-3-initdefault"><a href="#3）如果想开机直接进入“命令行模式”，可编辑-etc-inittab-文件，设置为-id-3-initdefault" class="headerlink" title="3）如果想开机直接进入“命令行模式”，可编辑 /etc/inittab 文件，设置为 id:3:initdefault:"></a>3）如果想开机直接进入“命令行模式”，可编辑 /etc/inittab 文件，设置为 id:3:initdefault:</h3><p> 如果想直接进入“窗口模式”，则设置为 id:5:initdefault:<br> 在inittab文件里所有的有效语句都遵守如下格式：<br> id:runlevels:action:process<br> id 可任意起名但不能重复，是唯一标识<br> runlevels  运行级别</p>
 <hr>
-<p>常用命令：<br>man   查看帮助信息<br>info  查看帮助信息<br>cd /  切换至根目录   cd ..  切换至上一层目录<br>ls   查看目录下所有文件<br>ls –a &gt; dir.txt ← 将ls –a命令执行结果输出到dir.txt文件<br>ls –a &gt;&gt; dir.txt ← 将ls –a命令执行结果附加到dir.txt文件之后<br>vi   编辑文件<br>cat  查看文件内容<br>pwd  显示当前工作目录<br>touch  新建文件<br>mkdir 创建新目录<br>cp   复制文件或目录<br>mv   移动文件或更改名称<br>rm   删除文件<br>find   查找文件<br>reboot 重启<br>shutdown  -h 关机<br>shutdown  -r 重启</p>
+<h2 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h2><p>man   查看帮助信息<br>info  查看帮助信息<br>cd /  切换至根目录   cd ..  切换至上一层目录<br>ls   查看目录下所有文件<br>ls –a &gt; dir.txt ← 将ls –a命令执行结果输出到dir.txt文件<br>ls –a &gt;&gt; dir.txt ← 将ls –a命令执行结果附加到dir.txt文件之后<br>vi   编辑文件<br>cat  查看文件内容<br>pwd  显示当前工作目录<br>touch  新建文件<br>mkdir 创建新目录<br>cp   复制文件或目录<br>mv   移动文件或更改名称<br>rm   删除文件<br>find   查找文件<br>reboot 重启<br>shutdown  -h 关机<br>shutdown  -r 重启</p>
 <hr>
 <ul>
 <li>via <em><a href="https://blog.csdn.net/u010787336/article/details/67634640" target="_blank" rel="noopener">https://blog.csdn.net/u010787336/article/details/67634640</a></em> </li>
@@ -606,6 +637,12 @@
           
           
 
+
+          <!-- CloudCalendar -->
+        <div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+        <div class="widget" id="CloudCalendar"></div>
+        </div>
+
           
 
         </div>
@@ -621,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Vi-基本操作"><span class="nav-number">1.</span> <span class="nav-text">1.Vi 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进入vi"><span class="nav-number">1.1.</span> <span class="nav-text">1) 进入vi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-切换至插入模式（Insert-mode）编辑文件"><span class="nav-number">1.2.</span> <span class="nav-text">2) 切换至插入模式（Insert mode）编辑文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-退出vi及保存文件"><span class="nav-number">1.3.</span> <span class="nav-text">3)  退出vi及保存文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CentOS-网络配置"><span class="nav-number">2.</span> <span class="nav-text">2.CentOS 网络配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）找到-etc-sysconfig-network-scripts-目录下-ifcfg-ens-代表任意数字，修改其中的-onboot-yes-wq-保存并退出，然后重启网络"><span class="nav-number">2.1.</span> <span class="nav-text">1）找到 /etc/sysconfig/network-scripts 目录下 ifcfg-ens*,  代表任意数字，修改其中的 onboot=yes , :wq 保存并退出，然后重启网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）重启网络命令"><span class="nav-number">2.2.</span> <span class="nav-text">2）重启网络命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CentOS-图像界面"><span class="nav-number">3.</span> <span class="nav-text">3.CentOS 图像界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）命令模式进入图形界面"><span class="nav-number">3.1.</span> <span class="nav-text">1）命令模式进入图形界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）安装图形界面"><span class="nav-number">3.2.</span> <span class="nav-text">2）安装图形界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）如果想开机直接进入“命令行模式”，可编辑-etc-inittab-文件，设置为-id-3-initdefault"><span class="nav-number">3.3.</span> <span class="nav-text">3）如果想开机直接进入“命令行模式”，可编辑 /etc/inittab 文件，设置为 id:3:initdefault:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Vi-基本操作"><span class="nav-number">1.</span> <span class="nav-text">1.Vi 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进入vi"><span class="nav-number">1.1.</span> <span class="nav-text">1) 进入vi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-切换至插入模式（Insert-mode）编辑文件"><span class="nav-number">1.2.</span> <span class="nav-text">2) 切换至插入模式（Insert mode）编辑文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-退出vi及保存文件"><span class="nav-number">1.3.</span> <span class="nav-text">3)  退出vi及保存文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CentOS-网络配置"><span class="nav-number">2.</span> <span class="nav-text">2.CentOS 网络配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）找到-etc-sysconfig-network-scripts-目录下-ifcfg-ens-代表任意数字，修改其中的-onboot-yes-wq-保存并退出，然后重启网络"><span class="nav-number">2.1.</span> <span class="nav-text">1）找到 /etc/sysconfig/network-scripts 目录下 ifcfg-ens*,  代表任意数字，修改其中的 onboot=yes , :wq 保存并退出，然后重启网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）重启网络命令"><span class="nav-number">2.2.</span> <span class="nav-text">2）重启网络命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CentOS-图像界面"><span class="nav-number">3.</span> <span class="nav-text">3.CentOS 图像界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）命令模式进入图形界面"><span class="nav-number">3.1.</span> <span class="nav-text">1）命令模式进入图形界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）安装图形界面"><span class="nav-number">3.2.</span> <span class="nav-text">2）安装图形界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）如果想开机直接进入“命令行模式”，可编辑-etc-inittab-文件，设置为-id-3-initdefault"><span class="nav-number">3.3.</span> <span class="nav-text">3）如果想开机直接进入“命令行模式”，可编辑 /etc/inittab 文件，设置为 id:3:initdefault:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令："><span class="nav-number">4.</span> <span class="nav-text">常用命令：</span></a></li></ol></div>
             
 
           </div>
@@ -653,6 +690,15 @@
   </span>
   <span class="author" itemprop="copyrightHolder">DaiJixiang</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">11.8k</span>
   
 </div>
 
@@ -1191,9 +1237,27 @@
 
   
 
-
   <script type="text/javascript" src="/lib/zclip/clipboard.min.js"></script>	
 <script type="text/javascript" src="/js/src/custom.js"></script>
+  <!-- calendar widget -->
+
+    <script src="/lib/CloudCalendar.min.js"></script>
+    <script src="/lib/languages.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN', 
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/calendar/'
+                }
+            )
+        );
+    });
+    </script>
+
+
+
   <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
