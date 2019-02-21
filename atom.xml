@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T14:14:34.410Z</updated>
+  <updated>2019-02-21T15:48:32.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centOS指令</title>
+    <link href="http://yoursite.com/2019/02/21/centOS%E6%8C%87%E4%BB%A4/"/>
+    <id>http://yoursite.com/2019/02/21/centOS指令/</id>
+    <published>2019-02-21T15:43:09.000Z</published>
+    <updated>2019-02-21T15:48:32.634Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-关机-系统的关机、重启以及登出-的命令&quot;&gt;&lt;a href=&quot;#1-关机-系统的关机、重启以及登出-的命令&quot; class=&quot;headerlink&quot; title=&quot;1.关机 (系统的关机、重启以及登出 ) 的命令&quot;&gt;&lt;/a&gt;1.关机 (系统的关机、重启以及登出
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>linux wget 命令用法详解(附实例说明)</title>
@@ -474,30 +498,6 @@
     </summary>
     
       <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>微信开发--网页授权access_token与全局access_token获取用户信息的接口</title>
-    <link href="http://yoursite.com/2019/02/19/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91-%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83access-token%E4%B8%8E%E5%85%A8%E5%B1%80access-token%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9A%84%E6%8E%A5%E5%8F%A3/"/>
-    <id>http://yoursite.com/2019/02/19/微信开发-网页授权access-token与全局access-token获取用户信息的接口/</id>
-    <published>2019-02-19T06:46:15.000Z</published>
-    <updated>2019-02-19T06:53:31.532Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;微信开发——网页授权access-token与全局access-token获取用户信息的接口&quot;&gt;&lt;a href=&quot;#微信开发——网页授权access-token与全局access-token获取用户信息的接口&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java-access_token" scheme="http://yoursite.com/categories/java-access-token/"/>
     
     
   </entry>
