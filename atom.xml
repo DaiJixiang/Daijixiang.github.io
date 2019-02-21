@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T07:32:31.640Z</updated>
+  <updated>2019-02-21T10:38:02.280Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java中Stack类的用法</title>
+    <link href="http://yoursite.com/2019/02/21/Java%E4%B8%ADStack%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/02/21/Java中Stack类的用法/</id>
+    <published>2019-02-21T10:36:44.000Z</published>
+    <updated>2019-02-21T10:38:02.280Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;java中stack的使用方法，堆栈是一种”后进先出”（LIFO） 的数据结构， 只能在一端进行插入（称为”压栈”） 或删除 （称为”出栈”）数据的操作,下面看示例吧&lt;/p&gt;
+&lt;p&gt;JAVA 中，使用 java.util.Stack 类的构造方法创建对象。&lt;/p&gt;
+&lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>java代码实现栈</title>
