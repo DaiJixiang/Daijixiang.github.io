@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T13:47:28.025Z</updated>
+  <updated>2019-02-21T13:52:54.915Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/02/21/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%89%E8%A3%85MySql/"/>
     <id>http://yoursite.com/2019/02/21/腾讯云安装MySql/</id>
     <published>2019-02-21T13:41:21.000Z</published>
-    <updated>2019-02-21T13:47:28.025Z</updated>
+    <updated>2019-02-21T13:52:54.915Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;h2 id=&quot;1-本次安装MySql版本为mysql-5-7-20，使用wget命令对MySql安装压缩包进行下载，如下：&quot;&gt;&lt;a href=&quot;#1-本次安装MySql版本为mysql-5-7-20，使用wget命令对MySql安装压缩包进行下载，如下：&quot;
+          &lt;p&gt;1.本次安装MySql版本为mysql-5.7.20，使用wget命令对MySql安装压缩包进行下载，如下：&lt;/p&gt;
+&lt;p&gt; wget &lt;a
         
       
     
