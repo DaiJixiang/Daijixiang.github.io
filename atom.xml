@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T02:06:54.235Z</updated>
+  <updated>2019-02-21T07:18:02.555Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java中动态数组ArrayList类的用法</title>
+    <link href="http://yoursite.com/2019/02/21/Java%E4%B8%AD%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84ArrayList%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/02/21/Java中动态数组ArrayList类的用法/</id>
+    <published>2019-02-21T07:15:14.000Z</published>
+    <updated>2019-02-21T07:18:02.555Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1、什么是ArrayList&quot;&gt;&lt;a href=&quot;#1、什么是ArrayList&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>CentOS 基本操作</title>
