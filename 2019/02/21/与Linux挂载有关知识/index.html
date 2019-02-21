@@ -114,16 +114,17 @@
 
 
 
-<meta name="description" content="Welcome to my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="左岸de博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="linux centos 中的挂载是什么意思介绍和解释介绍及如何挂载1、linux centos 中的挂载是什么意思？Linux系统里是没有盘符的,所有的命令及我们Windows中的盘符都是用目录的形式进行管理,把每一个分区和某一个目录对应。那么,我们对这个目录的操作就是对这个分区的操作,这样就实现了硬件管理手段和软件目录管理手段的统一,这个比如D盘分区和linux系统中根目录/test一一绑定的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="与Linux挂载有关知识">
+<meta property="og:url" content="http://yoursite.com/2019/02/21/与Linux挂载有关知识/index.html">
 <meta property="og:site_name" content="左岸de博客">
-<meta property="og:description" content="Welcome to my blog">
+<meta property="og:description" content="linux centos 中的挂载是什么意思介绍和解释介绍及如何挂载1、linux centos 中的挂载是什么意思？Linux系统里是没有盘符的,所有的命令及我们Windows中的盘符都是用目录的形式进行管理,把每一个分区和某一个目录对应。那么,我们对这个目录的操作就是对这个分区的操作,这样就实现了硬件管理手段和软件目录管理手段的统一,这个比如D盘分区和linux系统中根目录/test一一绑定的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-21T01:38:18.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="左岸de博客">
-<meta name="twitter:description" content="Welcome to my blog">
+<meta name="twitter:title" content="与Linux挂载有关知识">
+<meta name="twitter:description" content="linux centos 中的挂载是什么意思介绍和解释介绍及如何挂载1、linux centos 中的挂载是什么意思？Linux系统里是没有盘符的,所有的命令及我们Windows中的盘符都是用目录的形式进行管理,把每一个分区和某一个目录对应。那么,我们对这个目录的操作就是对这个分区的操作,这样就实现了硬件管理手段和软件目录管理手段的统一,这个比如D盘分区和linux系统中根目录/test一一绑定的">
 
 
 
@@ -153,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/21/与Linux挂载有关知识/">
 
 
 
 
 
-  <title>左岸de博客</title>
+  <title>与Linux挂载有关知识 | 左岸de博客</title>
   
 
 
@@ -178,8 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -304,22 +304,24 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
   
   
+    
+  
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal true" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/Markdown语法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/21/与Linux挂载有关知识/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DaiJixiang">
@@ -336,9 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/19/Markdown语法/" itemprop="url">Markdown语法</a></h1>
+          <h1 class="post-title" itemprop="name headline">与Linux挂载有关知识</h1>
         
 
         <div class="post-meta">
@@ -350,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-19T14:24:53+08:00">
-                2019-02-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-21T09:31:57+08:00">
+                2019-02-21
               </time>
             
 
@@ -373,8 +373,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/ECS/" itemprop="url" rel="index">
+                    <span itemprop="name">ECS</span>
                   </a>
                 </span>
 
@@ -392,156 +392,13 @@
           
 
           
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。相比WYSIWYG编辑器优点：1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而Markdown只需要在标题内容前加#即可
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/19/Markdown语法/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/access-token/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DaiJixiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左岸de博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/19/access-token/" itemprop="url">access_token</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-19T14:14:44+08:00">
-                2019-02-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/java-access-token/" itemprop="url" rel="index">
-                    <span itemprop="name">java-access_token</span>
-                  </a>
-                </span>
-
-                
-                
-              
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
             </span>
           
 
           
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
@@ -558,20 +415,22 @@
       
 
       
-        
-          
-          微信公众号之access_token获取与管理
-转自：https://www.cnblogs.com/fengzheng/p/5027630.html
-在将access_token之前，还有两个重要参数需要知晓，这两个参数分别是appID和appsecret，这是在申请公众号的时候自动分配给公众号的，相当于公众号的身份标示，在很多接口中需要这两个参数，接下来在请求access_token的时候就需
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/19/access-token/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="linux-centos-中的挂载是什么意思介绍和解释介绍及如何挂载"><a href="#linux-centos-中的挂载是什么意思介绍和解释介绍及如何挂载" class="headerlink" title="linux centos 中的挂载是什么意思介绍和解释介绍及如何挂载"></a><center>linux centos 中的挂载是什么意思介绍和解释介绍及如何挂载</center></h1><h2 id="1、linux-centos-中的挂载是什么意思？"><a href="#1、linux-centos-中的挂载是什么意思？" class="headerlink" title="1、linux centos 中的挂载是什么意思？"></a>1、linux centos 中的挂载是什么意思？</h2><p>Linux系统里是没有盘符的,所有的命令及我们Windows中的盘符都是用目录的形式进行管理,把每一个分区和某一个目录对应。那么,我们对这个目录的操作就是对这个分区的操作,这样就实现了硬件管理手段和软件目录管理手段的统一,这个比如D盘分区和linux系统中根目录/test一一绑定的过程就叫做Linux系统中的挂载。</p>
+<p>那么，如何在linux centos系统中挂载硬盘呢？<br>linux centos 挂载的详细操作步骤：<br>首先远程连接linux服务器，一般可以使用专用的linux连接工具，个人喜好可以按自己选择远程工具，本人推荐常用下载putty工具。</p>
+<h2 id="2、-查看linux-系统服务器上的-磁盘-情况-fdisk-l"><a href="#2、-查看linux-系统服务器上的-磁盘-情况-fdisk-l" class="headerlink" title="2、 查看linux 系统服务器上的 磁盘 情况 fdisk -l"></a>2、 查看linux 系统服务器上的 磁盘 情况 fdisk -l</h2><p>查看结果: 该服务器上有  三块磁盘  一个40G系统盘 另外另个磁盘  即为   个人磁盘    也就是我们需要挂载的磁盘</p>
+<h2 id="3、-linux-centos-磁盘分区命令"><a href="#3、-linux-centos-磁盘分区命令" class="headerlink" title="3、  linux centos 磁盘分区命令"></a>3、  linux centos 磁盘分区命令</h2><p>倘若我们挂载  /dev/xvdc1    10G 磁盘，那么我们可以先  格式化分区   输入  fdisk /dev/xvdc1  </p>
+<p>依次输入:   n    p    1   二次回车   w   即可<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Command (m for <span class="keyword">help</span>):n  </span><br><span class="line">Command <span class="keyword">action</span>  </span><br><span class="line">　　   e    <span class="keyword">extended</span>                  //输入e为创建扩展分区  </span><br><span class="line">　　   p    primary <span class="keyword">partition</span> (<span class="number">1</span><span class="number">-4</span>)      //输入p为创建逻辑分区  </span><br><span class="line">p  </span><br><span class="line">Partion <span class="built_in">number</span>(<span class="number">1</span><span class="number">-4</span>)：<span class="number">1</span>      //在这里输入l，就进入划分逻辑分区阶段了；  </span><br><span class="line"><span class="keyword">First</span> cylinder (<span class="number">51</span><span class="number">-125</span>, <span class="keyword">default</span> <span class="number">51</span>):   //注：这个就是分区的<span class="keyword">Start</span> 值；这里最好直接按回车，如果您输入了一个非默认的数字，会造成空间浪费；  </span><br><span class="line"><span class="keyword">Using</span> <span class="keyword">default</span> <span class="keyword">value</span> <span class="number">51</span>  </span><br><span class="line"><span class="keyword">Last</span> cylinder <span class="keyword">or</span> +<span class="keyword">size</span> <span class="keyword">or</span> +sizeM <span class="keyword">or</span> +sizeK (<span class="number">51</span><span class="number">-125</span>, <span class="keyword">default</span> <span class="number">125</span>): +<span class="number">200</span>M 注：这个是定义分区大小的，+<span class="number">200</span>M 就是大小为<span class="number">200</span>M ；当然您也可以根据p提示的单位cylinder的大小来算，然后来指定 <span class="keyword">End</span>的数值。回头看看是怎么算的；还是用+<span class="number">200</span>M这个办法来添加，这样能直观一点。如果您想添加一个<span class="number">10</span>G左右大小的分区，请输入 +<span class="number">10000</span>M ；  </span><br><span class="line">  </span><br><span class="line">Command (m <span class="keyword">for</span> <span class="keyword">help</span>): w                     //最后输入w回车保存。</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-linux-centos-格式化磁盘命令"><a href="#4-linux-centos-格式化磁盘命令" class="headerlink" title="4. linux centos 格式化磁盘命令"></a>4. linux centos 格式化磁盘命令</h2><p>#mkfs.ext4 /dev/xvdc1</p>
+<h2 id="5-linux-centos-创建目录命令"><a href="#5-linux-centos-创建目录命令" class="headerlink" title="5. linux centos 创建目录命令"></a>5. linux centos 创建目录命令</h2><p>#mkdir /mydisk         用于映射你需要挂载的磁盘, 挂载成功后，每次你只需要访问该目录即是可通过#cd /mydisk访问对应的磁盘分区。</p>
+<h2 id="6-linux-centos-挂载磁盘命令"><a href="#6-linux-centos-挂载磁盘命令" class="headerlink" title="6.linux centos 挂载磁盘命令"></a>6.linux centos 挂载磁盘命令</h2><p>#mount/dev/xvdc1/mydisk意思是将服务器上/dev/xvdc1绑定到你所创建的目录mydisk文件目录上。</p>
+<h2 id="7-linux-centos-配置挂载开机启动-关键步骤"><a href="#7-linux-centos-配置挂载开机启动-关键步骤" class="headerlink" title="7. linux centos 配置挂载开机启动 ,关键步骤"></a>7. linux centos 配置挂载开机启动 ,关键步骤</h2><p>echo “/dev/sdb1/dataext4defaults00” &gt;&gt; /etc/fstab<br>该命令及其重要，因为挂载磁盘操作挂载成功后，重启服务器后会丢失挂载，以至于挂载失效，即要写入开启挂载启动项。</p>
+<p>该命令中，ext4 是对应你的格式化磁盘的类型格式，如我这边的磁盘格式化时用了ext4格式进行格式。</p>
+<h2 id="8-重启linux服务器命令"><a href="#8-重启linux服务器命令" class="headerlink" title="8.  重启linux服务器命令"></a>8.  重启linux服务器命令</h2><p>shutdown -r now</p>
+<hr>
+<ul>
+<li>via <em><a href="https://blog.csdn.net/test18580/article/details/74210603/" target="_blank" rel="noopener">https://blog.csdn.net/test18580/article/details/74210603/</a></em></li>
+</ul>
+
       
     </div>
     
@@ -588,161 +447,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/01/scrapy使用方法/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DaiJixiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左岸de博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/01/scrapy使用方法/" itemprop="url">scrpy使用方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-01T16:03:33+08:00">
-                2019-02-01
-              </time>
+              <a href="/2019/02/21/Linux挂载/" rel="next" title="Linux挂载">
+                <i class="fa fa-chevron-left"></i> Linux挂载
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Scrapy教程center&gt;将要抓取 quotes.toscrape.com网站。此教程指导你完成以下任务：
-新建Scrapy工程编写一个spider爬网站提取数据用命令行导出爬取的数据改变spider递归爬行链接使用spider参数创建一个项目在抓取之前，先要构建Scrapy项目：scrapy startproject tutorial此命令创建以下内容的tutorial目录：12345
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/01/scrapy使用方法/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -752,141 +478,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DaiJixiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="左岸de博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/30/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-30T11:59:21+08:00">
-                2019-01-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/30/hello-world/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
@@ -894,6 +490,10 @@ Quick
 
 
           
+
+  
+
+
 
         </div>
         
@@ -914,8 +514,17 @@ Quick
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1000,6 +609,22 @@ Quick
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux-centos-中的挂载是什么意思介绍和解释介绍及如何挂载"><span class="nav-number">1.</span> <span class="nav-text">linux centos 中的挂载是什么意思介绍和解释介绍及如何挂载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、linux-centos-中的挂载是什么意思？"><span class="nav-number">1.1.</span> <span class="nav-text">1、linux centos 中的挂载是什么意思？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、-查看linux-系统服务器上的-磁盘-情况-fdisk-l"><span class="nav-number">1.2.</span> <span class="nav-text">2、 查看linux 系统服务器上的 磁盘 情况 fdisk -l</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、-linux-centos-磁盘分区命令"><span class="nav-number">1.3.</span> <span class="nav-text">3、  linux centos 磁盘分区命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-linux-centos-格式化磁盘命令"><span class="nav-number">1.4.</span> <span class="nav-text">4. linux centos 格式化磁盘命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-linux-centos-创建目录命令"><span class="nav-number">1.5.</span> <span class="nav-text">5. linux centos 创建目录命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-linux-centos-挂载磁盘命令"><span class="nav-number">1.6.</span> <span class="nav-text">6.linux centos 挂载磁盘命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-linux-centos-配置挂载开机启动-关键步骤"><span class="nav-number">1.7.</span> <span class="nav-text">7. linux centos 配置挂载开机启动 ,关键步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-重启linux服务器命令"><span class="nav-number">1.8.</span> <span class="nav-text">8.  重启linux服务器命令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1181,6 +806,10 @@ Quick
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
