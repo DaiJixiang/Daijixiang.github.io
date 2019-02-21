@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T10:41:55.189Z</updated>
+  <updated>2019-02-21T10:56:30.695Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于使用Tomcat容器</title>
+    <link href="http://yoursite.com/2019/02/21/%E5%85%B3%E4%BA%8E%E4%BD%BF%E7%94%A8Tomcat%E5%AE%B9%E5%99%A8/"/>
+    <id>http://yoursite.com/2019/02/21/关于使用Tomcat容器/</id>
+    <published>2019-02-21T10:55:30.000Z</published>
+    <updated>2019-02-21T10:56:30.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Q：使用Tomcat容器，提示信息: 至少有一个JAR被扫描用于TLD但尚未包含TLD&lt;/p&gt;
+&lt;h2 id=&quot;A：没有报错，都是些-INFO-级别的输出&quot;&gt;&lt;a href=&quot;#A：没有报错，都是些-INFO-级别的输出&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Dos命令大全</title>
