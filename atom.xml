@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-20T11:57:01.054Z</updated>
+  <updated>2019-02-21T01:05:22.643Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux挂载</title>
+    <link href="http://yoursite.com/2019/02/21/Linux%E6%8C%82%E8%BD%BD/"/>
+    <id>http://yoursite.com/2019/02/21/Linux挂载/</id>
+    <published>2019-02-21T01:03:00.000Z</published>
+    <updated>2019-02-21T01:05:22.643Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;什么是挂载？mount的用处在哪？&quot;&gt;&lt;a href=&quot;#什么是挂载？mount的用处在哪？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【Python】列表嵌套字典修改字典里面的一个值却把全部的值都修改了</title>
