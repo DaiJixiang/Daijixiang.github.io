@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T13:52:54.915Z</updated>
+  <updated>2019-02-21T14:14:34.410Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux wget 命令用法详解(附实例说明)</title>
+    <link href="http://yoursite.com/2019/02/21/linux-wget-%E5%91%BD%E4%BB%A4%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3-%E9%99%84%E5%AE%9E%E4%BE%8B%E8%AF%B4%E6%98%8E/"/>
+    <id>http://yoursite.com/2019/02/21/linux-wget-命令用法详解-附实例说明/</id>
+    <published>2019-02-21T14:09:28.000Z</published>
+    <updated>2019-02-21T14:14:34.410Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Linux
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>腾讯云安装MySql</title>
@@ -475,32 +499,6 @@
     
       <category term="java-access_token" scheme="http://yoursite.com/categories/java-access-token/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown语法</title>
-    <link href="http://yoursite.com/2019/02/19/Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/02/19/Markdown语法/</id>
-    <published>2019-02-19T06:24:53.000Z</published>
-    <updated>2019-02-19T06:33:07.533Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;br&gt;相比WYSIWYG编辑器&lt;br&gt;优点：&lt;br&gt;1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。&lt;br&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="基础" scheme="http://yoursite.com/categories/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
