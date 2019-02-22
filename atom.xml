@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-22T11:08:51.329Z</updated>
+  <updated>2019-02-22T11:44:52.046Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Navicat远程连接腾讯云MySQL数据库</title>
+    <link href="http://yoursite.com/2019/02/22/Navicat%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E8%85%BE%E8%AE%AF%E4%BA%91MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://yoursite.com/2019/02/22/Navicat远程连接腾讯云MySQL数据库/</id>
+    <published>2019-02-22T11:40:44.000Z</published>
+    <updated>2019-02-22T11:44:52.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;原因&lt;br&gt;默认情况下，mysql帐号不允许从远程登陆，只能在localhost登录，若想远程连接云服务器，需要进行授权。&lt;/p&gt;
+&lt;p&gt;方法步骤：&lt;br&gt;一、远程登录授权&lt;br&gt;授予全部权限 给 所有库的所有表 用户名为root 密码为123456&lt;br&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Centos7.3 安装Mysql5.7并修改初始密码</title>
@@ -477,30 +502,6 @@
     </summary>
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java实现结构体数组</title>
-    <link href="http://yoursite.com/2019/02/20/java%E5%AE%9E%E7%8E%B0%E7%BB%93%E6%9E%84%E4%BD%93%E6%95%B0%E7%BB%84/"/>
-    <id>http://yoursite.com/2019/02/20/java实现结构体数组/</id>
-    <published>2019-02-20T06:41:00.000Z</published>
-    <updated>2019-02-20T06:42:33.395Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
     
     
   </entry>
