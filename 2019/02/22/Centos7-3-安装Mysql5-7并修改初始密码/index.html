@@ -117,16 +117,22 @@
 
 
 
-<meta name="description" content="Welcome to my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="左岸de博客">
-<meta property="og:url" content="http://yoursite.com/categories/ECS/index.html">
+<meta name="description" content="1、官方安装文档http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/ 2、下载 Mysql yum包http://dev.mysql.com/downloads/repo/yum/  下载到本地再上传到服务器，或者使用wget 直接下载 wget http://repo.mysql.com/mysql57-community-release">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos7.3 安装Mysql5.7并修改初始密码">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/Centos7-3-安装Mysql5-7并修改初始密码/index.html">
 <meta property="og:site_name" content="左岸de博客">
-<meta property="og:description" content="Welcome to my blog">
+<meta property="og:description" content="1、官方安装文档http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/ 2、下载 Mysql yum包http://dev.mysql.com/downloads/repo/yum/  下载到本地再上传到服务器，或者使用wget 直接下载 wget http://repo.mysql.com/mysql57-community-release">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/02/22/5c6fd7967d767.png">
+<meta property="og:image" content="https://i.loli.net/2019/02/22/5c6fd796706f6.png">
+<meta property="og:image" content="https://i.loli.net/2019/02/22/5c6fd79603edf.png">
+<meta property="og:image" content="https://i.loli.net/2019/02/22/5c6fd796070d2.png">
+<meta property="og:updated_time" content="2019-02-22T11:08:51.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="左岸de博客">
-<meta name="twitter:description" content="Welcome to my blog">
+<meta name="twitter:title" content="Centos7.3 安装Mysql5.7并修改初始密码">
+<meta name="twitter:description" content="1、官方安装文档http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/ 2、下载 Mysql yum包http://dev.mysql.com/downloads/repo/yum/  下载到本地再上传到服务器，或者使用wget 直接下载 wget http://repo.mysql.com/mysql57-community-release">
+<meta name="twitter:image" content="https://i.loli.net/2019/02/22/5c6fd7967d767.png">
 
 
 
@@ -156,13 +162,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/ECS/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/22/Centos7-3-安装Mysql5-7并修改初始密码/">
 
 
 
 
 
-  <title>分类: ECS | 左岸de博客</title>
+  <title>Centos7.3 安装Mysql5.7并修改初始密码 | 左岸de博客</title>
   
 
 
@@ -181,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -307,261 +313,252 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+    
+  
+  
+
+  <article class="post post-type-normal true" itemscope="" itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block category">
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/Centos7-3-安装Mysql5-7并修改初始密码/">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>ECS<small>分类</small>
-        </h1>
-      </div>
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DaiJixiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左岸de博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Centos7.3 安装Mysql5.7并修改初始密码</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-22T19:03:23+08:00">
+                2019-02-22
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-22T19:08:51+08:00">
+                2019-02-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECS/" itemprop="url" rel="index">
+                    <span itemprop="name">ECS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  527 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/22/Centos7-3-安装Mysql5-7并修改初始密码/" itemprop="url">
-              
-                <span itemprop="name">Centos7.3 安装Mysql5.7并修改初始密码</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-22T19:03:23+08:00" content="2019-02-22">
-          02-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/22/CentOS-7-4-使用yum源安装MySQL-5-7-21/" itemprop="url">
-              
-                <span itemprop="name">CentOS 7.4 使用yum源安装MySQL 5.7.21</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-22T18:51:25+08:00" content="2019-02-22">
-          02-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/22/将yum源更改为阿里镜像/" itemprop="url">
-              
-                <span itemprop="name">将yum源更改为阿里镜像</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-22T14:40:21+08:00" content="2019-02-22">
-          02-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/21/centOS指令/" itemprop="url">
-              
-                <span itemprop="name">centOS指令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-21T23:43:09+08:00" content="2019-02-21">
-          02-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/21/linux-wget-命令用法详解-附实例说明/" itemprop="url">
-              
-                <span itemprop="name">linux wget 命令用法详解(附实例说明)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-21T22:09:28+08:00" content="2019-02-21">
-          02-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/21/腾讯云安装MySql/" itemprop="url">
-              
-                <span itemprop="name">腾讯云安装MySql</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-21T21:41:21+08:00" content="2019-02-21">
-          02-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/21/CentOS-基本操作/" itemprop="url">
-              
-                <span itemprop="name">CentOS 基本操作</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-21T09:41:11+08:00" content="2019-02-21">
-          02-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/21/与Linux挂载有关知识/" itemprop="url">
-              
-                <span itemprop="name">与Linux挂载有关知识</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-21T09:31:57+08:00" content="2019-02-21">
-          02-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/21/Linux挂载/" itemprop="url">
-              
-                <span itemprop="name">Linux挂载</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-21T09:03:00+08:00" content="2019-02-21">
-          02-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>1、官方安装文档<br><a href="http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="noopener">http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></p>
+<p>2、下载 Mysql yum包<br><a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/repo/yum/</a></p>
+<p><img src="https://i.loli.net/2019/02/22/5c6fd7967d767.png" alt="01.png"></p>
+<p>下载到本地再上传到服务器，或者使用wget 直接下载</p>
+<p>wget <a href="http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm" target="_blank" rel="noopener">http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm</a></p>
+<p>3、安转软件源<br>将platform-and-version-specific-package-name 替换为你下载的rpm名</p>
+<p>sudo rpm -Uvh platform-and-version-specific-package-name.rpm</p>
+<p>例如</p>
+<p>rpm -Uvh mysql57-community-release-el7-10.noarch.rpm</p>
+<p><img src="https://i.loli.net/2019/02/22/5c6fd796706f6.png" alt="02.png"></p>
+<p>4、安装mysql服务端<br> yum install  -y  mysql-community-server</p>
+<p>如果网络环境不是很好，执行完命令就可以去泡杯茶��或者荣耀杀一局</p>
+<p>5、启动mysql<br>service mysqld start</p>
+<p>systemctl start mysqld.service</p>
+<p>6、检查mysql 的运行状态<br>service mysqld status</p>
+<p>systemctl status mysqld.service</p>
+<p>7、修改临时密码<br>Mysql5.7默认安装之后root是有密码的。</p>
+<p>7.1 获取MySQL的临时密码</p>
+<p>为了加强安全性，MySQL5.7为root用户随机生成了一个密码，在error log中，关于error log的位置，如果安装的是RPM包，则默认是/var/log/mysqld.log。<br>只有启动过一次mysql才可以查看临时密码</p>
+<p>grep ‘temporary password’ /var/log/mysqld.log</p>
+<p> <img src="https://i.loli.net/2019/02/22/5c6fd79603edf.png" alt="03.png"></p>
+<p>这里的密码是YdsGaxOq&gt;2n!</p>
+<p>7.2 登陆并修改密码<br>使用默认的密码登陆</p>
+<p>mysql -uroot -p</p>
+<p>用该密码登录到服务端后，必须马上修改密码，不然会报如下错误：</p>
+<p>mysql&gt; select @@log_error;<br>ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.<br>mysql&gt;<br>修改密码</p>
+<p>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘root123’;</p>
+<p>如果密码设置太简单出现以下的提示</p>
+<p><img src="https://i.loli.net/2019/02/22/5c6fd796070d2.png" alt="04.png"></p>
+<p>如何解决ERROR 1819 (HY000): Your password does not satisfy the current policy requirements呢？ 这里直接提供解决方案文末有详细的说明</p>
+<p>必须修改两个全局参数：<br>首先，修改validate_password_policy参数的值</p>
+<p>mysql&gt; set global validate_password_policy=0; </p>
+<p>再修改密码的长度</p>
+<p>set global validate_password_length=1;</p>
+<p>再次执行修改密码就可以了</p>
+<p>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘root123’;</p>
+<p>8、授权其他机器登陆<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’ IDENTIFIED BY ‘mypassword’ WITH GRANT OPTION;</p>
+<p>FLUSH  PRIVILEGES;</p>
+<p>9、关于密码设置的详细说明</p>
+<h2 id="ERROR-1819-HY000-Your-password-does-not-satisfy-the-current-policy-requirements"><a href="#ERROR-1819-HY000-Your-password-does-not-satisfy-the-current-policy-requirements" class="headerlink" title="ERROR 1819 (HY000): Your password does not satisfy the current policy requirements"></a>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</h2><p><em><a href="https://blog.csdn.net/zyw_java/article/details/70949596" target="_blank" rel="noopener">https://blog.csdn.net/zyw_java/article/details/70949596</a></em></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/22/CentOS-7-4-使用yum源安装MySQL-5-7-21/" rel="next" title="CentOS 7.4 使用yum源安装MySQL 5.7.21">
+                <i class="fa fa-chevron-left"></i> CentOS 7.4 使用yum源安装MySQL 5.7.21
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -569,6 +566,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -589,8 +590,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -706,6 +716,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ERROR-1819-HY000-Your-password-does-not-satisfy-the-current-policy-requirements"><span class="nav-number">1.</span> <span class="nav-text">ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
         
@@ -919,6 +945,10 @@ show_date_time();
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

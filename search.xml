@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Centos7.3 安装Mysql5.7并修改初始密码</title>
+      <link href="/2019/02/22/Centos7-3-%E5%AE%89%E8%A3%85Mysql5-7%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81/"/>
+      <url>/2019/02/22/Centos7-3-%E5%AE%89%E8%A3%85Mysql5-7%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81/</url>
+      
+        <content type="html"><![CDATA[<p>1、官方安装文档<br><a href="http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="noopener">http://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></p><p>2、下载 Mysql yum包<br><a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/repo/yum/</a></p><p><img src="https://i.loli.net/2019/02/22/5c6fd7967d767.png" alt="01.png"></p><p>下载到本地再上传到服务器，或者使用wget 直接下载</p><p>wget <a href="http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm" target="_blank" rel="noopener">http://repo.mysql.com/mysql57-community-release-el7-10.noarch.rpm</a></p><p>3、安转软件源<br>将platform-and-version-specific-package-name 替换为你下载的rpm名</p><p>sudo rpm -Uvh platform-and-version-specific-package-name.rpm</p><p>例如</p><p>rpm -Uvh mysql57-community-release-el7-10.noarch.rpm</p><p><img src="https://i.loli.net/2019/02/22/5c6fd796706f6.png" alt="02.png"></p><p>4、安装mysql服务端<br> yum install  -y  mysql-community-server</p><p>如果网络环境不是很好，执行完命令就可以去泡杯茶��或者荣耀杀一局</p><p>5、启动mysql<br>service mysqld start</p><p>systemctl start mysqld.service</p><p>6、检查mysql 的运行状态<br>service mysqld status</p><p>systemctl status mysqld.service</p><p>7、修改临时密码<br>Mysql5.7默认安装之后root是有密码的。</p><p>7.1 获取MySQL的临时密码</p><p>为了加强安全性，MySQL5.7为root用户随机生成了一个密码，在error log中，关于error log的位置，如果安装的是RPM包，则默认是/var/log/mysqld.log。<br>只有启动过一次mysql才可以查看临时密码</p><p>grep ‘temporary password’ /var/log/mysqld.log</p><p> <img src="https://i.loli.net/2019/02/22/5c6fd79603edf.png" alt="03.png"></p><p>这里的密码是YdsGaxOq&gt;2n!</p><p>7.2 登陆并修改密码<br>使用默认的密码登陆</p><p>mysql -uroot -p</p><p>用该密码登录到服务端后，必须马上修改密码，不然会报如下错误：</p><p>mysql&gt; select @@log_error;<br>ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.<br>mysql&gt;<br>修改密码</p><p>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘root123’;</p><p>如果密码设置太简单出现以下的提示</p><p><img src="https://i.loli.net/2019/02/22/5c6fd796070d2.png" alt="04.png"></p><p>如何解决ERROR 1819 (HY000): Your password does not satisfy the current policy requirements呢？ 这里直接提供解决方案文末有详细的说明</p><p>必须修改两个全局参数：<br>首先，修改validate_password_policy参数的值</p><p>mysql&gt; set global validate_password_policy=0; </p><p>再修改密码的长度</p><p>set global validate_password_length=1;</p><p>再次执行修改密码就可以了</p><p>ALTER USER ‘root‘@’localhost’ IDENTIFIED BY ‘root123’;</p><p>8、授权其他机器登陆<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’ IDENTIFIED BY ‘mypassword’ WITH GRANT OPTION;</p><p>FLUSH  PRIVILEGES;</p><p>9、关于密码设置的详细说明</p><h2 id="ERROR-1819-HY000-Your-password-does-not-satisfy-the-current-policy-requirements"><a href="#ERROR-1819-HY000-Your-password-does-not-satisfy-the-current-policy-requirements" class="headerlink" title="ERROR 1819 (HY000): Your password does not satisfy the current policy requirements"></a>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</h2><p><em><a href="https://blog.csdn.net/zyw_java/article/details/70949596" target="_blank" rel="noopener">https://blog.csdn.net/zyw_java/article/details/70949596</a></em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ECS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CentOS 7.4 使用yum源安装MySQL 5.7.21</title>
       <link href="/2019/02/22/CentOS-7-4-%E4%BD%BF%E7%94%A8yum%E6%BA%90%E5%AE%89%E8%A3%85MySQL-5-7-21/"/>
       <url>/2019/02/22/CentOS-7-4-%E4%BD%BF%E7%94%A8yum%E6%BA%90%E5%AE%89%E8%A3%85MySQL-5-7-21/</url>
