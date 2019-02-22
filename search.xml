@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>centos7修改系统语言为简体中文</title>
+      <link href="/2019/02/23/centos7%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80%E4%B8%BA%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/"/>
+      <url>/2019/02/23/centos7%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80%E4%B8%BA%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87/</url>
+      
+        <content type="html"><![CDATA[<p>说明<br>自己装系统时一般都可以自定义选择系统语言。可是云端服务器一般都是安装好的镜像，默认系统语言为英文，对于初学者可能还会有搞不懂的计算机词汇。这里简单说一下centos7怎么修改系统语言为中文。</p><p>修改centos7系统语言<br>查看系当前语言包<br>locale<br>查看系统拥有语言包<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">locale -a</span></span><br></pre></td></tr></table></figure></p><p>（zh_CN.UTF-8是简体中文，如果没有zh_CN.UTF-8,就安装语言包，如果存在可以直接设置)</p><p>安装简体中文语言包<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> kde-l10n-Chinese</span><br></pre></td></tr></table></figure></p><p>设置为中文<br>临时修改，重启服务器之后就会还原之前的设置<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LANG=<span class="string">"zh_CN.UTF-8"</span>    <span class="comment">#修改为中文</span></span><br><span class="line">LANG=<span class="string">"en_US.UTF-8"</span>    <span class="comment">#修改为英文</span></span><br></pre></td></tr></table></figure></p><p>永久修改就要把配置写入文件里面<br>方法（一）<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/locale.conf</span><br><span class="line"><span class="comment">##加下面内容到第一行，设置中文</span></span><br><span class="line">LANG=zh_CN.UTF8</span><br></pre></td></tr></table></figure></p><p>方法（二）第二种方法使用方便<br><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">localectl </span> <span class="built_in">set-locale</span> <span class="string">LANG=</span><span class="string">zh_CN.</span><span class="string">UTF8</span></span><br></pre></td></tr></table></figure></p><p>其他<br>修改时区为亚洲上海<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -sf <span class="regexp">/usr/</span>share<span class="regexp">/zoneinfo/</span>Asia<span class="regexp">/Shanghai /</span>etc<span class="regexp">/localtime</span></span><br></pre></td></tr></table></figure></p><p>查看ip时bash: ifconfig: command not found 解决办法<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools      ##一般是没有安装这个</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ECS </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Navicat远程连接腾讯云MySQL数据库</title>
       <link href="/2019/02/22/Navicat%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E8%85%BE%E8%AE%AF%E4%BA%91MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
       <url>/2019/02/22/Navicat%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E8%85%BE%E8%AE%AF%E4%BA%91MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
