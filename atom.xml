@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T15:48:32.634Z</updated>
+  <updated>2019-02-22T06:42:54.757Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将yum源更改为阿里镜像</title>
+    <link href="http://yoursite.com/2019/02/22/%E5%B0%86yum%E6%BA%90%E6%9B%B4%E6%94%B9%E4%B8%BA%E9%98%BF%E9%87%8C%E9%95%9C%E5%83%8F/"/>
+    <id>http://yoursite.com/2019/02/22/将yum源更改为阿里镜像/</id>
+    <published>2019-02-22T06:40:21.000Z</published>
+    <updated>2019-02-22T06:42:54.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;有时候CentOS默认的yum源不一定是国内镜像，导致yum在线安装及更新速度不是很理想。这时候需要将yum源设置为国内镜像站点。国内主要开源的开源镜像站点应该是网易和阿里云了。&lt;/p&gt;
+&lt;p&gt;修改CentOS默认yum源为mirrors.163.com&lt;/p&gt;
+&lt;p&gt;1、
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>centOS指令</title>
@@ -468,30 +494,6 @@
         
         
           &lt;h1 id=&quot;IntelliJ-IDEA手动配置连接MySQL数据库&quot;&gt;&lt;a href=&quot;#IntelliJ-IDEA手动配置连接MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;IntelliJ
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JSP 连接数据库</title>
-    <link href="http://yoursite.com/2019/02/19/JSP-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://yoursite.com/2019/02/19/JSP-连接数据库/</id>
-    <published>2019-02-19T07:33:18.000Z</published>
-    <updated>2019-02-19T07:41:24.458Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;JSP连接数据库&quot;&gt;&lt;a href=&quot;#JSP连接数据库&quot; class=&quot;headerlink&quot; title=&quot;JSP连接数据库&quot;&gt;&lt;/a&gt;JSP连接数据库&lt;/h1&gt;&lt;p&gt;本教程假定您已经了解了 JDBC 应用程序的工作方式。在您开始学习 JSP
         
       
     
