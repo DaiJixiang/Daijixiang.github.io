@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-22T06:42:54.757Z</updated>
+  <updated>2019-02-22T10:56:49.321Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 7.4 使用yum源安装MySQL 5.7.21</title>
+    <link href="http://yoursite.com/2019/02/22/CentOS-7-4-%E4%BD%BF%E7%94%A8yum%E6%BA%90%E5%AE%89%E8%A3%85MySQL-5-7-21/"/>
+    <id>http://yoursite.com/2019/02/22/CentOS-7-4-使用yum源安装MySQL-5-7-21/</id>
+    <published>2019-02-22T10:51:25.000Z</published>
+    <updated>2019-02-22T10:56:49.321Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;从CentOS 7.0发布以来，yum源中开始使用mariadb来代替MySQL的安装。即使你输入的是yum install mysql , 显示的也是mariadb的安装内容。&lt;/p&gt;
+&lt;p&gt;输入yum install
+        
+      
+    
+    </summary>
+    
+      <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>将yum源更改为阿里镜像</title>
@@ -470,30 +495,6 @@
         
         
           &lt;h1 id=&quot;求字符串中a字符出现的次数&quot;&gt;&lt;a href=&quot;#求字符串中a字符出现的次数&quot; class=&quot;headerlink&quot; title=&quot;求字符串中a字符出现的次数&quot;&gt;&lt;/a&gt;求字符串中a字符出现的次数&lt;/h1&gt;&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA手动配置连接MySQL数据库</title>
-    <link href="http://yoursite.com/2019/02/19/IDEA%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AE%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://yoursite.com/2019/02/19/IDEA手动配置连接MySQL数据库/</id>
-    <published>2019-02-19T07:54:29.000Z</published>
-    <updated>2019-02-20T02:49:51.175Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;IntelliJ-IDEA手动配置连接MySQL数据库&quot;&gt;&lt;a href=&quot;#IntelliJ-IDEA手动配置连接MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;IntelliJ
         
       
     

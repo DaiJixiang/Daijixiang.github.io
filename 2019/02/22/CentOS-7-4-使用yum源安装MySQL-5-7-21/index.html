@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="左岸de博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="从CentOS 7.0发布以来，yum源中开始使用mariadb来代替MySQL的安装。即使你输入的是yum install mysql , 显示的也是mariadb的安装内容。 输入yum install mysql-server，提示yum没有可用的安装包。 因此，如果使用yum安装MySQL的话，就需要去下载官方指定的yum源。 网址为： https://dev.mysql.com/down">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS 7.4 使用yum源安装MySQL 5.7.21">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/CentOS-7-4-使用yum源安装MySQL-5-7-21/index.html">
+<meta property="og:site_name" content="左岸de博客">
+<meta property="og:description" content="从CentOS 7.0发布以来，yum源中开始使用mariadb来代替MySQL的安装。即使你输入的是yum install mysql , 显示的也是mariadb的安装内容。 输入yum install mysql-server，提示yum没有可用的安装包。 因此，如果使用yum安装MySQL的话，就需要去下载官方指定的yum源。 网址为： https://dev.mysql.com/down">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-22T10:56:49.321Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS 7.4 使用yum源安装MySQL 5.7.21">
+<meta name="twitter:description" content="从CentOS 7.0发布以来，yum源中开始使用mariadb来代替MySQL的安装。即使你输入的是yum install mysql , 显示的也是mariadb的安装内容。 输入yum install mysql-server，提示yum没有可用的安装包。 因此，如果使用yum安装MySQL的话，就需要去下载官方指定的yum源。 网址为： https://dev.mysql.com/down">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/22/CentOS-7-4-使用yum源安装MySQL-5-7-21/">
+
+
+
+
+
+  <title>CentOS 7.4 使用yum源安装MySQL 5.7.21 | 左岸de博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">左岸de博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+    
+  
+  
+
+  <article class="post post-type-normal true" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/CentOS-7-4-使用yum源安装MySQL-5-7-21/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DaiJixiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左岸de博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CentOS 7.4 使用yum源安装MySQL 5.7.21</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-22T18:51:25+08:00">
+                2019-02-22
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-22T18:56:49+08:00">
+                2019-02-22
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECS/" itemprop="url" rel="index">
+                    <span itemprop="name">ECS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.8k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  15 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>从CentOS 7.0发布以来，yum源中开始使用mariadb来代替MySQL的安装。即使你输入的是yum install mysql , 显示的也是mariadb的安装内容。</p>
+<p>输入yum install mysql-server，提示yum没有可用的安装包。</p>
+<p>因此，如果使用yum安装MySQL的话，就需要去下载官方指定的yum源。</p>
+<p>网址为： <a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/repo/yum/</a></p>
+<p>先卸载mariadb。</p>
+<p>检查mariadb是否已安装<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="variable">@localhost</span> ~]<span class="comment"># yum list installed | grep mariadb</span></span><br><span class="line">mariadb-libs.x86_64                    <span class="number">1</span><span class="symbol">:</span><span class="number">5.5</span>.<span class="number">56</span>-<span class="number">2</span>.el7                  <span class="variable">@anaconda</span></span><br><span class="line">全部卸载</span><br><span class="line">[root<span class="variable">@localhost</span> ~]<span class="comment"># yum -y remove mariadb*</span></span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">正在解决依赖关系</span><br><span class="line">--&gt; 正在检查事务</span><br><span class="line">---&gt; 软件包 mariadb-libs.x86_64.<span class="number">1.5</span>.<span class="number">5.56</span>-<span class="number">2</span>.el7 将被 删除</span><br><span class="line">--&gt; 正在处理依赖关系 libmysqlclient.so.<span class="number">18</span>()(<span class="number">64</span>bit)，它被软件包 <span class="number">2</span><span class="symbol">:postfix-</span><span class="number">2.10</span>.<span class="number">1</span>-<span class="number">6</span>.el7.x86_64 需要</span><br><span class="line">--&gt; 正在处理依赖关系 libmysqlclient.so.<span class="number">18</span>(libmysqlclient_18)(<span class="number">64</span>bit)，它被软件包 <span class="number">2</span><span class="symbol">:postfix-</span><span class="number">2.10</span>.<span class="number">1</span>-<span class="number">6</span>.el7.x86_64 需要</span><br><span class="line">--&gt; 正在检查事务</span><br><span class="line">---&gt; 软件包 postfix.x86_64.<span class="number">2.2</span>.<span class="number">10.1</span>-<span class="number">6</span>.el7 将被 删除</span><br><span class="line">--&gt; 解决依赖关系完成</span><br><span class="line"></span><br><span class="line">依赖关系解决</span><br><span class="line"></span><br><span class="line">====================================================================================================</span><br><span class="line"> Package                  架构               版本                       源                     大小</span><br><span class="line">====================================================================================================</span><br><span class="line">正在删除<span class="symbol">:</span></span><br><span class="line"> mariadb-libs             x86_64             <span class="number">1</span><span class="symbol">:</span><span class="number">5.5</span>.<span class="number">56</span>-<span class="number">2</span>.el7             <span class="variable">@anaconda</span>             <span class="number">4.4</span> M</span><br><span class="line">为依赖而移除<span class="symbol">:</span></span><br><span class="line"> postfix                  x86_64             <span class="number">2</span><span class="symbol">:</span><span class="number">2.10</span>.<span class="number">1</span>-<span class="number">6</span>.el7             <span class="variable">@anaconda</span>              <span class="number">12</span> M</span><br><span class="line"></span><br><span class="line">事务概要</span><br><span class="line">====================================================================================================</span><br><span class="line">移除  <span class="number">1</span> 软件包 (+<span class="number">1</span> 依赖软件包)</span><br><span class="line"></span><br><span class="line">安装大小：<span class="number">17</span> M</span><br><span class="line">Downloading <span class="symbol">packages:</span></span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction test</span><br><span class="line">Transaction test succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  正在删除    : <span class="number">2</span><span class="symbol">:postfix-</span><span class="number">2.10</span>.<span class="number">1</span>-<span class="number">6</span>.el7.x86_64                                                   <span class="number">1</span>/<span class="number">2</span></span><br><span class="line">  正在删除    : <span class="number">1</span><span class="symbol">:mariadb-libs-</span><span class="number">5.5</span>.<span class="number">56</span>-<span class="number">2</span>.el7.x86_64                                              <span class="number">2</span>/<span class="number">2</span></span><br><span class="line">  验证中      : <span class="number">1</span><span class="symbol">:mariadb-libs-</span><span class="number">5.5</span>.<span class="number">56</span>-<span class="number">2</span>.el7.x86_64                                              <span class="number">1</span>/<span class="number">2</span></span><br><span class="line">  验证中      : <span class="number">2</span><span class="symbol">:postfix-</span><span class="number">2.10</span>.<span class="number">1</span>-<span class="number">6</span>.el7.x86_64                                                   <span class="number">2</span>/<span class="number">2</span></span><br><span class="line"></span><br><span class="line">删除<span class="symbol">:</span></span><br><span class="line">  mariadb-libs.x86_64 <span class="number">1</span><span class="symbol">:</span><span class="number">5.5</span>.<span class="number">56</span>-<span class="number">2</span>.el7</span><br><span class="line"></span><br><span class="line">作为依赖被删除<span class="symbol">:</span></span><br><span class="line">  postfix.x86_64 <span class="number">2</span><span class="symbol">:</span><span class="number">2.10</span>.<span class="number">1</span>-<span class="number">6</span>.el7</span><br><span class="line"></span><br><span class="line">完毕！</span><br><span class="line">[root<span class="variable">@localhost</span> ~]<span class="comment"># yum list installed | grep mariadb</span></span><br><span class="line">[root<span class="variable">@localhost</span> ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<p>下面进行MySQL的安装。</p>
+<p>一、下载安装官方提供的yum rpm包</p>
+<p>打开网页：<a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/repo/yum/</a></p>
+<p>点击Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package后面的download，进入新的页面点击No thanks, just start my download.就可以看到下载源地址了。</p>
+<p>进入如下目录<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cd /usr/local/src/</span><br><span class="line">下载rpm包：wget https:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line"></span><br><span class="line">[root@localhost src]# wget https:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line">-<span class="number">-2018</span><span class="number">-02</span><span class="number">-11</span> <span class="number">14</span>:<span class="number">26</span>:<span class="number">03</span>--  https:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line">正在解析主机 dev.mysql.com (dev.mysql.com)... <span class="number">137.254</span><span class="number">.60</span><span class="number">.11</span></span><br><span class="line">正在连接 dev.mysql.com (dev.mysql.com)|<span class="number">137.254</span><span class="number">.60</span><span class="number">.11</span>|:<span class="number">443.</span>.. 已连接。</span><br><span class="line">已发出 HTTP 请求，正在等待回应... <span class="number">302</span> Found</span><br><span class="line">位置：https:<span class="comment">//repo.mysql.com//mysql57-community-release-el7-11.noarch.rpm [跟随至新的 URL]</span></span><br><span class="line">-<span class="number">-2018</span><span class="number">-02</span><span class="number">-11</span> <span class="number">14</span>:<span class="number">26</span>:<span class="number">05</span>--  https:<span class="comment">//repo.mysql.com//mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line">正在解析主机 repo.mysql.com (repo.mysql.com)... <span class="number">96.6</span><span class="number">.11</span><span class="number">.178</span></span><br><span class="line">正在连接 repo.mysql.com (repo.mysql.com)|<span class="number">96.6</span><span class="number">.11</span><span class="number">.178</span>|:<span class="number">443.</span>.. 已连接。</span><br><span class="line">已发出 HTTP 请求，正在等待回应... <span class="number">200</span> OK</span><br><span class="line">长度：<span class="number">25680</span> (<span class="number">25</span>K) [application/x-redhat-package-manager]</span><br><span class="line">正在保存至: “mysql57-community-release-el7<span class="number">-11.</span>noarch.rpm”</span><br><span class="line"></span><br><span class="line"><span class="number">100</span>%[==========================================================&gt;] <span class="number">25</span>,<span class="number">680</span>      <span class="number">99.4</span>KB/s 用时 <span class="number">0.3</span>s</span><br><span class="line"></span><br><span class="line"><span class="number">2018</span><span class="number">-02</span><span class="number">-11</span> <span class="number">14</span>:<span class="number">26</span>:<span class="number">06</span> (<span class="number">99.4</span> KB/s) - 已保存 “mysql57-community-release-el7<span class="number">-11.</span>noarch.rpm” [<span class="number">25680</span>/<span class="number">25680</span>])</span><br><span class="line"></span><br><span class="line">[root@localhost src]# ll</span><br><span class="line">总用量 <span class="number">28</span></span><br><span class="line">-rw-r--r--. <span class="number">1</span> root root <span class="number">25680</span> <span class="number">4</span>月  <span class="number">27</span> <span class="number">2017</span> mysql57-community-release-el7<span class="number">-11.</span>noarch.rpm</span><br><span class="line">[root@localhost src]#</span><br><span class="line">安装rpm包：rpm -ivh mysql57-community-release-el7<span class="number">-11.</span>noarch.rpm</span><br><span class="line">[root@localhost src]# rpm -ivh mysql57-community-release-el7<span class="number">-11.</span>noarch.rpm</span><br><span class="line">警告：mysql57-community-release-el7<span class="number">-11.</span>noarch.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID <span class="number">5072e1</span>f5: NOKEY</span><br><span class="line">准备中...                          ################################# [<span class="number">100</span>%]</span><br><span class="line">正在升级/安装...</span><br><span class="line">   <span class="number">1</span>:mysql57-community-release-el7<span class="number">-11</span> ################################# [<span class="number">100</span>%]</span><br><span class="line">检查mysql的yum源是否安装成功：yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span> </span><br><span class="line"></span><br><span class="line">[root@localhost src]# yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span></span><br><span class="line">mysql-connectors-community/x86_64        MySQL Connectors Community           <span class="number">45</span></span><br><span class="line">mysql-tools-community/x86_64             MySQL Tools Community                <span class="number">57</span></span><br><span class="line">mysql57-community/x86_64                 MySQL <span class="number">5.7</span> Community Server          <span class="number">247</span></span><br></pre></td></tr></table></figure></p>
+<p>看到如上，表示安装成功。</p>
+<p>再次使用yum来安装mysql-server，就不会提示没有可用软件包。</p>
+<p>二、使用yum install mysql-server安装<br><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost src]# yum install mysql-server</span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * base: mirrors.zju.edu.cn</span><br><span class="line"> * extras: centos.ustc.edu.cn</span><br><span class="line"> * updates: mirrors.zju.edu.cn</span><br><span class="line">正在解决依赖关系</span><br><span class="line">--&gt; 正在检查事务</span><br><span class="line">---&gt; 软件包 mysql-community-server.x86_64<span class="meta">.0</span><span class="meta">.5</span><span class="meta">.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7 将被 安装</span><br><span class="line">--&gt; 正在处理依赖关系 mysql-community-<span class="meta">common</span>(x86-<span class="number">64</span>) = <span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7，它被软件包 mysql-community-server-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64 需要</span><br><span class="line">--&gt; 正在处理依赖关系 mysql-community-client(x86-<span class="number">64</span>) &gt;= <span class="number">5.7</span><span class="meta">.9</span>，它被软件包 mysql-community-server-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64 需要</span><br><span class="line">--&gt; 正在检查事务</span><br><span class="line">---&gt; 软件包 mysql-community-client.x86_64<span class="meta">.0</span><span class="meta">.5</span><span class="meta">.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7 将被 安装</span><br><span class="line">--&gt; 正在处理依赖关系 mysql-community-libs(x86-<span class="number">64</span>) &gt;= <span class="number">5.7</span><span class="meta">.9</span>，它被软件包 mysql-community-client-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64 需要</span><br><span class="line">---&gt; 软件包 mysql-community-<span class="meta">common</span>.x86_64<span class="meta">.0</span><span class="meta">.5</span><span class="meta">.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7 将被 安装</span><br><span class="line">--&gt; 正在检查事务</span><br><span class="line">---&gt; 软件包 mysql-community-libs.x86_64<span class="meta">.0</span><span class="meta">.5</span><span class="meta">.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7 将被 安装</span><br><span class="line">--&gt; 解决依赖关系完成</span><br><span class="line"></span><br><span class="line">依赖关系解决</span><br><span class="line"></span><br><span class="line">====================================================================================================</span><br><span class="line"> Package                        架构           版本                 源                         大小</span><br><span class="line">====================================================================================================</span><br><span class="line">正在安装:</span><br><span class="line"> mysql-community-server         x86_64         <span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7         mysql57-community         <span class="number">164</span> M</span><br><span class="line">为依赖而安装:</span><br><span class="line"> mysql-community-client         x86_64         <span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7         mysql57-community          <span class="number">24</span> M</span><br><span class="line"> mysql-community-<span class="meta">common</span>         x86_64         <span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7         mysql57-community         <span class="number">272</span> k</span><br><span class="line"> mysql-community-libs           x86_64         <span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7         mysql57-community         <span class="number">2.1</span> M</span><br><span class="line"></span><br><span class="line">事务概要</span><br><span class="line">====================================================================================================</span><br><span class="line">安装  <span class="number">1</span> 软件包 (+<span class="number">3</span> 依赖软件包)</span><br><span class="line"></span><br><span class="line">总下载量：<span class="number">190</span> M</span><br><span class="line">安装大小：<span class="number">858</span> M</span><br><span class="line">Is this ok [y/d/N]: y</span><br><span class="line">Downloading packages:</span><br><span class="line">警告：/var/cache/yum/x86_64/<span class="number">7</span>/mysql57-community/packages/mysql-community-<span class="meta">common</span>-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY</span><br><span class="line">mysql-community-<span class="meta">common</span>-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64.rpm 的公钥尚未安装</span><br><span class="line">(<span class="number">1</span>/<span class="number">4</span>): mysql-community-<span class="meta">common</span>-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64.rpm                        | <span class="number">272</span> kB  <span class="number">00</span>:<span class="number">00</span>:<span class="number">02</span></span><br><span class="line">(<span class="number">2</span>/<span class="number">4</span>): mysql-community-libs-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64.rpm                          | <span class="number">2.1</span> MB  <span class="number">00</span>:<span class="number">00</span>:<span class="number">02</span></span><br><span class="line">(<span class="number">3</span>/<span class="number">4</span>): mysql-community-client-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64.rpm                        |  <span class="number">24</span> MB  <span class="number">00</span>:<span class="number">00</span>:<span class="number">27</span></span><br><span class="line">(<span class="number">4</span>/<span class="number">4</span>): mysql-community-server-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64.rpm                        | <span class="number">164</span> MB  <span class="number">00</span>:<span class="number">03</span>:<span class="number">25</span></span><br><span class="line">----------------------------------------------------------------------------------------------------</span><br><span class="line">总计                                                                <span class="number">927</span> kB/s | <span class="number">190</span> MB  <span class="number">00</span>:<span class="number">03</span>:<span class="number">30</span></span><br><span class="line">从 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql 检索密钥</span><br><span class="line">导入 GPG key <span class="number">0x5072E1F5</span>:</span><br><span class="line"> 用户ID     : <span class="string">"MySQL Release Engineering &lt;mysql-build@oss.oracle.com&gt;"</span></span><br><span class="line"> 指纹       : a4a9 <span class="number">4068</span> 76fc bd3c <span class="number">4567</span> 70c8 8c71 8d3b <span class="number">5072</span> e1f5</span><br><span class="line"> 软件包     : mysql57-community-release-el7-<span class="number">11.</span>noarch (installed)</span><br><span class="line"> 来自       : /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line">是否继续？[y/N]：y</span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction <span class="keyword">test</span></span><br><span class="line">Transaction <span class="keyword">test</span> succeeded</span><br><span class="line">Running transaction</span><br><span class="line">警告：RPM 数据库已被非 yum 程序修改。</span><br><span class="line">  正在安装    : mysql-community-<span class="meta">common</span>-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                      <span class="number">1</span>/<span class="number">4</span></span><br><span class="line">  正在安装    : mysql-community-libs-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                        <span class="number">2</span>/<span class="number">4</span></span><br><span class="line">  正在安装    : mysql-community-client-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                      <span class="number">3</span>/<span class="number">4</span></span><br><span class="line">  正在安装    : mysql-community-server-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                      <span class="number">4</span>/<span class="number">4</span></span><br><span class="line">  验证中      : mysql-community-server-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                      <span class="number">1</span>/<span class="number">4</span></span><br><span class="line">  验证中      : mysql-community-<span class="meta">common</span>-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                      <span class="number">2</span>/<span class="number">4</span></span><br><span class="line">  验证中      : mysql-community-libs-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                        <span class="number">3</span>/<span class="number">4</span></span><br><span class="line">  验证中      : mysql-community-client-<span class="number">5.7</span><span class="meta">.21</span>-<span class="number">1.</span>el7.x86_64                                      <span class="number">4</span>/<span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">已安装:</span><br><span class="line">  <span class="selector-tag">mysql-community-server</span><span class="selector-class">.x86_64</span> 0<span class="selector-pseudo">:5.7.21-1.el7</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">作为依赖被安装:</span><br><span class="line">  mysql-community-client<span class="selector-class">.x86_64</span> <span class="number">0</span>:<span class="number">5.7</span>.<span class="number">21</span>-<span class="number">1</span><span class="selector-class">.el7</span>     mysql-community-common<span class="selector-class">.x86_64</span> <span class="number">0</span>:<span class="number">5.7</span>.<span class="number">21</span>-<span class="number">1</span>.el7</span><br><span class="line">  mysql-community-libs<span class="selector-class">.x86_64</span> <span class="number">0</span>:<span class="number">5.7</span>.<span class="number">21</span>-<span class="number">1</span>.el7</span><br></pre></td></tr></table></figure>
+<p>完毕！<br>查看版本信息：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># rpm -qi mysql-community-server</span></span><br><span class="line">Name        : mysql-community-server</span><br><span class="line">Version     : 5.7.21</span><br><span class="line"><span class="keyword">Release</span>     : <span class="number">1.</span>el7</span><br><span class="line">Architecture: x86_64</span><br><span class="line"><span class="keyword">Install</span> <span class="built_in">Date</span>: <span class="number">2018</span>年<span class="number">02</span>月<span class="number">11</span>日 星期日 <span class="number">14</span>时<span class="number">40</span>分<span class="number">22</span>秒</span><br><span class="line"><span class="keyword">Group</span>       : Applications/<span class="keyword">Databases</span></span><br><span class="line"><span class="keyword">Size</span>        : <span class="number">775546923</span></span><br><span class="line">License     : Copyright (c) <span class="number">2000</span>, <span class="number">2017</span>, <span class="keyword">Oracle</span> <span class="keyword">and</span>/<span class="keyword">or</span> its affiliates. All rights reserved. <span class="keyword">Under</span> GPLv2 license <span class="keyword">as</span> shown <span class="keyword">in</span> the Description field.</span><br><span class="line">Signature   : DSA/<span class="keyword">SHA1</span>, <span class="number">2017</span>年<span class="number">12</span>月<span class="number">28</span>日 星期四 <span class="number">20</span>时<span class="number">54</span>分<span class="number">13</span>秒, <span class="keyword">Key</span> <span class="keyword">ID</span> <span class="number">8</span>c718d3b5072e1f5</span><br><span class="line"><span class="keyword">Source</span> RPM  : mysql-community<span class="number">-5.7</span><span class="number">.21</span><span class="number">-1.</span>el7.src.rpm</span><br><span class="line"><span class="keyword">Build</span> <span class="built_in">Date</span>  : <span class="number">2017</span>年<span class="number">12</span>月<span class="number">28</span>日 星期四 <span class="number">12</span>时<span class="number">11</span>分<span class="number">13</span>秒</span><br><span class="line"><span class="keyword">Build</span> Host  : siv27.no.oracle.com</span><br><span class="line">Relocations : (<span class="keyword">not</span> relocatable)</span><br><span class="line">Packager    : MySQL <span class="keyword">Release</span> Engineering &lt;mysql-<span class="keyword">build</span>@oss.oracle.com&gt;</span><br><span class="line">Vendor      : <span class="keyword">Oracle</span> <span class="keyword">and</span>/<span class="keyword">or</span> its affiliates</span><br><span class="line"><span class="keyword">URL</span>         : <span class="keyword">http</span>://www.mysql.com/</span><br><span class="line">Summary     : A very <span class="keyword">fast</span> <span class="keyword">and</span> reliable <span class="keyword">SQL</span> <span class="keyword">database</span> <span class="keyword">server</span></span><br><span class="line">Description :</span><br><span class="line">The MySQL(TM) software delivers a very <span class="keyword">fast</span>, multi-threaded, multi-<span class="keyword">user</span>,</span><br><span class="line"><span class="keyword">and</span> robust <span class="keyword">SQL</span> (Structured <span class="keyword">Query</span> <span class="keyword">Language</span>) <span class="keyword">database</span> server. MySQL <span class="keyword">Server</span></span><br><span class="line"><span class="keyword">is</span> intended <span class="keyword">for</span> mission-<span class="keyword">critical</span>, heavy-<span class="keyword">load</span> production systems <span class="keyword">as</span> well</span><br><span class="line"><span class="keyword">as</span> <span class="keyword">for</span> embedding <span class="keyword">into</span> mass-deployed software. MySQL <span class="keyword">is</span> a trademark <span class="keyword">of</span></span><br><span class="line"><span class="keyword">Oracle</span> <span class="keyword">and</span>/<span class="keyword">or</span> its affiliates</span><br><span class="line"></span><br><span class="line">The MySQL software has Dual Licensing, which means you can <span class="keyword">use</span> the MySQL</span><br><span class="line">software free <span class="keyword">of</span> charge <span class="keyword">under</span> the GNU <span class="keyword">General</span> <span class="keyword">Public</span> License</span><br><span class="line">(<span class="keyword">http</span>://www.gnu.org/licenses/). You can also purchase commercial MySQL</span><br><span class="line">licenses <span class="keyword">from</span> <span class="keyword">Oracle</span> <span class="keyword">and</span>/<span class="keyword">or</span> its affiliates <span class="keyword">if</span> you <span class="keyword">do</span> <span class="keyword">not</span> wish <span class="keyword">to</span> be <span class="keyword">bound</span> <span class="keyword">by</span> the terms <span class="keyword">of</span></span><br><span class="line">the GPL. See the chapter <span class="string">"Licensing and Support"</span> <span class="keyword">in</span> the <span class="keyword">manual</span> <span class="keyword">for</span></span><br><span class="line">further info.</span><br><span class="line"></span><br><span class="line">The MySQL web site (<span class="keyword">http</span>://www.mysql.com/) provides the latest news <span class="keyword">and</span></span><br><span class="line">information about the MySQL software.  Also please see the documentation</span><br><span class="line"><span class="keyword">and</span> the <span class="keyword">manual</span> <span class="keyword">for</span> more information.</span><br><span class="line"></span><br><span class="line">This <span class="keyword">package</span> includes the MySQL <span class="keyword">server</span> <span class="built_in">binary</span> <span class="keyword">as</span> well <span class="keyword">as</span> related utilities</span><br><span class="line"><span class="keyword">to</span> run <span class="keyword">and</span> <span class="keyword">administer</span> a MySQL server.</span><br></pre></td></tr></table></figure></p>
+<p>三、启动mysql-server<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost src]#<span class="built_in"> service </span>mysqld start</span><br><span class="line">Redirecting <span class="keyword">to</span> /bin/systemctl start mysqld.service</span><br></pre></td></tr></table></figure></p>
+<p>四、使用初始密码登陆<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># cat /var/log/mysqld.log|grep 'A temporary password'</span></span><br><span class="line"><span class="number">2018</span><span class="number">-02</span><span class="number">-11</span>T06:<span class="number">47</span>:<span class="number">54.773267</span>Z <span class="number">1</span> [Note] A temporary password <span class="keyword">is</span> generated <span class="keyword">for</span> root@localhost: <span class="number">3</span>=v/i;z/Y;P&gt;</span><br></pre></td></tr></table></figure></p>
+<p>最后一行冒号后面的部分3=v/i;z/Y;P&gt;就是初始密码。<br>使用此密码登录MySQL:<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"></span><br><span class="line">[root@localhost src]<span class="comment"># mysql -u root -p</span></span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQ<span class="class">L monitor.  Commands end with ;</span><span class="built_in"> or </span>\g.</span><br><span class="line">Your MySQL connection id is 3</span><br><span class="line">Server version: 5.7.21</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2018, Oracle<span class="built_in"> and/or </span>its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation<span class="built_in"> and/or </span>its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type 'help;'<span class="built_in"> or </span>'\h' for help. Type '\c' to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure></p>
+<p>五、修改初始密码<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost src]# mysqladmin -u root password 'new password'</span><br><span class="line">出现错误信息：</span><br><span class="line"></span><br><span class="line">mysqladmin: connect to server at 'localhost' failed</span><br><span class="line"><span class="keyword">error: </span>'Access denied for user 'root'@'localhost' (using password: NO)'</span><br></pre></td></tr></table></figure></p>
+<p>解决方法：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">root@localhost src</span>]<span class="meta"># systemctl stop mysqld.service</span></span><br><span class="line">[<span class="meta">root@localhost src</span>]<span class="meta"># mysqld --user=root --skip-grant-tables &amp;</span></span><br><span class="line">[<span class="meta">root@localhost src</span>]<span class="meta"># mysql -u root mysql</span></span><br><span class="line">mysql&gt; UPDATE user SET authentication_string=PASSWORD(<span class="string">'new password'</span>) <span class="keyword">where</span> USER=<span class="string">'root'</span>;</span><br><span class="line">Query OK, <span class="number">1</span> row affected, <span class="number">1</span> warning (<span class="number">0.00</span> sec)</span><br><span class="line">Rows matched: <span class="number">1</span>  Changed: <span class="number">1</span>  Warnings: <span class="number">1</span></span><br><span class="line"></span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, <span class="number">0</span> <span class="function">rows <span class="title">affected</span> (<span class="params"><span class="number">0.00</span> sec</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">mysql&gt; quit</span></span><br><span class="line"><span class="function">Bye</span></span><br></pre></td></tr></table></figure></p>
+<p>重启mysql-server，用新密码登陆OK。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># systemctl start mysqld</span></span><br><span class="line">[root@localhost src]<span class="comment"># mysql -u root -p</span></span><br><span class="line">Enter password:</span><br><span class="line">Welcome <span class="keyword">to</span> the MySQL monitor.  Commands end <span class="keyword">with</span> ; <span class="keyword">or</span> <span class="string">\g.</span></span><br><span class="line">Your MySQL connection id <span class="keyword">is</span> <span class="number">3</span></span><br><span class="line">Server version: <span class="number">5.7</span>.<span class="number">21</span></span><br><span class="line"></span><br><span class="line">Copyright (c) <span class="number">2000</span>, <span class="number">2018</span>, Oracle <span class="keyword">and</span>/<span class="keyword">or</span> its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle <span class="keyword">is</span> a registered trademark <span class="keyword">of</span> Oracle Corporation <span class="keyword">and</span>/<span class="keyword">or</span> its</span><br><span class="line">affiliates. Other names may be trademarks <span class="keyword">of</span> their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type <span class="string">'help;'</span> <span class="keyword">or</span> <span class="string">'\h'</span> <span class="keyword">for</span> help. Type <span class="string">'\c'</span> <span class="keyword">to</span> clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure></p>
+<p>正常登陆后发现一个问题：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show databases;</span><br><span class="line"><span class="builtin-name">ERROR</span> 1820 (HY000): You must reset your password using ALTER<span class="built_in"> USER </span>statement before executing this statement.</span><br></pre></td></tr></table></figure></p>
+<p>解决方法如下：<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter user <span class="emphasis">'root'</span>@<span class="emphasis">'localhost'</span> identified by <span class="emphasis">'yourpassword'</span>;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; set password=password("yourpassword");</span><br><span class="line">Query OK, 0 rows affected, 1 warning (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">| information<span class="emphasis">_schema |</span></span><br><span class="line"><span class="emphasis">| mysql              |</span></span><br><span class="line"><span class="emphasis">| performance_</span>schema |</span><br><span class="line">| sys                |</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br><span class="line"></span><br><span class="line">常用的命令：</span><br><span class="line"></span><br><span class="line">systemctl start mysqld    #启动mysqld</span><br><span class="line">systemctl stop mysqld    #停止mysqld</span><br><span class="line">systemctl restart mysqld    #重启mysqld</span><br><span class="line">systemctl enable mysqld   #设置开机启动</span><br><span class="line"></span><br><span class="line">systemctl status mysqld    #查看 MySQL Server 状态</span><br></pre></td></tr></table></figure></p>
+<p> 直接使用匿名登录失败：<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[dup@localhost ~]$ mysql</span><br><span class="line"><span class="keyword">ERROR </span>1045 (28000): Access denied for user 'dup'@'localhost' (using password: NO)</span><br></pre></td></tr></table></figure></p>
+<p>这是因为5.7版本已经默认没有匿名用户了。我们看下安装MySQL 5.7.21后默认的用户和数据库<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; mysql&gt; SELECT User, Host, HEX(authentication<span class="emphasis">_string) FROM mysql.user;</span></span><br><span class="line"><span class="emphasis">+---------------+-----------+------------------------------------------------------------------------------------+</span></span><br><span class="line"><span class="emphasis">| User          | Host      | HEX(authentication_</span>string)                                                         |</span><br><span class="line"><span class="code">+---------------+</span>-----------<span class="code">+------------------------------------------------------------------------------------+</span></span><br><span class="line">| root          | localhost | 2A38314635453231453335343037443838344136434434413733314145424642364146323039453142 |</span><br><span class="line">| mysql.session | localhost | 2A5448495349534E4F544156414C494450415353574F52445448415443414E42455553454448455245 |</span><br><span class="line">| mysql.sys     | localhost | 2A5448495349534E4F544156414C494450415353574F52445448415443414E42455553454448455245 |</span><br><span class="line"><span class="code">+---------------+</span>-----------<span class="code">+------------------------------------------------------------------------------------+</span></span><br><span class="line">3 rows in set (0.00 sec)</span><br><span class="line">mysql&gt; select user,host from mysql.user;</span><br><span class="line"><span class="code">+---------------+</span>-----------+</span><br><span class="line">| user          | host      |</span><br><span class="line"><span class="code">+---------------+</span>-----------+</span><br><span class="line">| mysql.session | localhost |</span><br><span class="line">| mysql.sys     | localhost |</span><br><span class="line">| root          | localhost |</span><br><span class="line"><span class="code">+---------------+</span>-----------+</span><br><span class="line">3 rows in set (0.01 sec)</span><br><span class="line">mysql&gt; show databases;</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">| information<span class="emphasis">_schema |</span></span><br><span class="line"><span class="emphasis">| mysql              |</span></span><br><span class="line"><span class="emphasis">| performance_</span>schema |</span><br><span class="line">| sys                |</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">4 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<p>关于默认的3个user的说明，详见官网：<a href="https://dev.mysql.com/doc/refman/5.7/en/reserved-users.html" target="_blank" rel="noopener">https://dev.mysql.com/doc/refman/5.7/en/reserved-users.html</a></p>
+<p>6.3.4 Reserved User Accounts<br>One part of the MySQL installation process is data directory initialization (see Section 2.10.1.1, “Initializing the Data Directory Manually Using mysqld”). During data directory initialization, MySQL creates user accounts that should be considered reserved:</p>
+<p>‘root‘@’localhost: Used for administrative purposes. This account has all privileges and can perform any operation.</p>
+<p>Strictly speaking, this account name is not reserved, in the sense that some installations rename the root account to something else to avoid exposing a highly privileged account with a well-known name.</p>
+<p>‘mysql.sys‘@’localhost’: Used as the DEFINER for sys schema objects. Use of the mysql.sys account avoids problems that occur if a DBA renames or removes the root account. This account is locked so that it cannot be used for client connections.</p>
+<p>‘mysql.session‘@’localhost’: Used internally by plugins to access the server. This account is locked so that it cannot be used for client connections.</p>
+<hr>
+<p><em><a href="https://blog.csdn.net/u014558668/article/details/79310267" target="_blank" rel="noopener">https://blog.csdn.net/u014558668/article/details/79310267</a></em></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/22/将yum源更改为阿里镜像/" rel="next" title="将yum源更改为阿里镜像">
+                <i class="fa fa-chevron-left"></i> 将yum源更改为阿里镜像
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="DaiJixiang">
+            
+              <p class="site-author-name" itemprop="name">DaiJixiang</p>
+              <p class="site-description motion-element" itemprop="description">Welcome to my blog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/DaiJixiang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1198089555@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+
+          <!-- CloudCalendar -->
+        <div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+        <div class="widget" id="CloudCalendar"></div>
+        </div>
+
+          <div id="days"></div>
+
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("02/07/2019 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+        </div>
+      </section>
+
+      
+
+        
+
+-        <div id="days"></div>
+
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("02/07/2019 15:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DaiJixiang</span>
+
+  
+</div>
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共29.9k字</span>
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/lib/zclip/clipboard.min.js"></script>	
+<script type="text/javascript" src="/js/src/custom.js"></script>
+  <!-- calendar widget -->
+
+    <script src="/lib/CloudCalendar.min.js"></script>
+    <script src="/lib/languages.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN', 
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/CloudCalendar/'
+                }
+            )
+        );
+    });
+    </script>
+
+
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+</body>
+</html>
