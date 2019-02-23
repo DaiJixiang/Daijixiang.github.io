@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-23T18:02:01.495Z</updated>
+  <updated>2019-02-23T18:07:19.250Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/02/24/java-MySql/"/>
     <id>http://yoursite.com/2019/02/24/java-MySql/</id>
     <published>2019-02-23T17:45:29.000Z</published>
-    <updated>2019-02-23T18:02:01.495Z</updated>
+    <updated>2019-02-23T18:07:19.250Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,8 @@
         
         
           &lt;p&gt;加载驱动：&lt;/p&gt;
-&lt;p&gt;　　1. 在工程目录中创建lib文件夹，将下载好的JDBC放到该文件夹下，如下图所示：&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2019/02/24/5c7188ba0753e.png&quot;
+&lt;ol&gt;
+&lt;li&gt;在工程目录中创建lib文件夹，将下载好的JDBC放到该文件夹下，如下图所示：&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2019/02/24/5c7188ba0753e.png&quot;
         
       
     
