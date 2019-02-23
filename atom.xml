@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-22T17:51:18.619Z</updated>
+  <updated>2019-02-23T18:02:01.495Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java_MySql</title>
+    <link href="http://yoursite.com/2019/02/24/java-MySql/"/>
+    <id>http://yoursite.com/2019/02/24/java-MySql/</id>
+    <published>2019-02-23T17:45:29.000Z</published>
+    <updated>2019-02-23T18:02:01.495Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;加载驱动：&lt;/p&gt;
+&lt;p&gt;　　1. 在工程目录中创建lib文件夹，将下载好的JDBC放到该文件夹下，如下图所示：&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2019/02/24/5c7188ba0753e.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>centos7修改系统语言为简体中文</title>
@@ -473,30 +498,6 @@
         
           &lt;p&gt;具体问题就是：当我往空列表里面添加字典，需要修改其中的一个键的值的时候，出现把其他同类的值也修改了。&lt;/p&gt;
 &lt;p&gt;下面就是出现问题的代码：&lt;br&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>python虚拟路径</title>
-    <link href="http://yoursite.com/2019/02/20/python%E8%99%9A%E6%8B%9F%E8%B7%AF%E5%BE%84/"/>
-    <id>http://yoursite.com/2019/02/20/python虚拟路径/</id>
-    <published>2019-02-20T08:07:56.000Z</published>
-    <updated>2019-02-20T08:10:18.083Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Python-和虚拟路径有关的方法&quot;&gt;&lt;a href=&quot;#Python-和虚拟路径有关的方法&quot; class=&quot;headerlink&quot; title=&quot;Python 和虚拟路径有关的方法&quot;&gt;&lt;/a&gt;Python 和虚拟路径有关的方法&lt;/h1&gt;&lt;p&gt;&lt;img
         
       
     
