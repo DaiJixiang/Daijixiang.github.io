@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>mysql连接问题</title>
+      <link href="/2019/02/24/mysql%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/02/24/mysql%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<center>MySQL安装问题–Can’t connect to MySQL server on localhost (10061)解决方法</center><p>有时候安装mysql后使用mysql命令时报错 Can’t connect to MySQL server on localhost (10061)，或者用net start mysql 时报服务名无效，一般是因为mysql服务没有启动。</p><p><img src="https://i.loli.net/2019/02/24/5c727c3c58c93.png" alt="01.png"></p><p>这时候可以用管理身份运行cmd.exe(注意必须是管理员身份运行),否则会报Install/Remove of the Service Denied! 可以在下图路径中找到cmd.exe，右键用管理员身份运行。</p><p><img src="https://i.loli.net/2019/02/24/5c727c3c626ad.png" alt="02.png"></p><p>然后将mysql加入到Windows的服务中。切换到mysql安装目录下的bin文件夹，命令行运行”mysqld –install”。</p><p>C:\Program Files\MySQL\MySQL Server 5.6\bin&gt;mysqld –install<br>此时使用“net start mysql”成功启动msyql，一般就可以正常启动mysql了</p><hr><center>修改密码</center><p>ALTER USER “root”@”localhost” IDENTIFIED  BY “你的新密码”;</p><p> 注意：重点啊，如果你没有设置认证方式，默认的密码加密方式是：caching_sha2_password，而现在很多客户端工具还不支持这种加密认证方式，连接测试的时候就会报错：client does not support  authentication protocol requested by server; consider upgrading MySQL client，这里的错误信息就是不支持身份认证方式，没关系，去my.ini里面在[mysqld]下面加上这句话即可：</p><p>default_authentication_plugin=mysql_native_password</p><hr><p><center>Navicat连接数据库MySQL报错2059</center><br>解释原因：据说，mysql8 之前的版本中加密规则是mysql_native_password,而在mysql8之后,加密规则是caching_sha2_password, 解决问题方法有两种,一种是升级navicat驱动,一种是把mysql用户登录密码加密规则还原成mysql_native_password. 现在说第二种方式<br>命令行进入MySQL数据库<br>输入以下指令，逐行输入，每行后加一个回车</p><pre><code>ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos; PASSWORD EXPIRE NEVER; #修改加密规则 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;password&apos;; #更新一下用户的密码 FLUSH PRIVILEGES; #刷新权限</code></pre><p>就像这样<br><img src="https://i.loli.net/2019/02/24/5c727d403bb1d.png" alt="03.png"></p><p>5.然后按理说应该是可以了</p><p>6.Tips：命令行中用的“password”即为更新后的数据库密码，可改为自己想设置的密码，比如“123”什么的，之后再用Navicat连接MySQL就连接成功了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java_MySql</title>
       <link href="/2019/02/24/java-MySql/"/>
       <url>/2019/02/24/java-MySql/</url>

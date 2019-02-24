@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-23T18:07:19.250Z</updated>
+  <updated>2019-02-24T11:17:34.437Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql连接问题</title>
+    <link href="http://yoursite.com/2019/02/24/mysql%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2019/02/24/mysql连接问题/</id>
+    <published>2019-02-24T11:03:14.000Z</published>
+    <updated>2019-02-24T11:17:34.437Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;center&gt;MySQL安装问题–Can’t connect to MySQL server on localhost (10061)解决方法&lt;/center&gt;
+
+&lt;p&gt;有时候安装mysql后使用mysql命令时报错 Can’t connect to MySQL server
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>java_MySql</title>
@@ -480,31 +506,6 @@
     </summary>
     
       <category term="ECS" scheme="http://yoursite.com/categories/ECS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>【Python】列表嵌套字典修改字典里面的一个值却把全部的值都修改了</title>
-    <link href="http://yoursite.com/2019/02/20/%E3%80%90Python%E3%80%91%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97%E5%AD%97%E5%85%B8%E4%BF%AE%E6%94%B9%E5%AD%97%E5%85%B8%E9%87%8C%E9%9D%A2%E7%9A%84%E4%B8%80%E4%B8%AA%E5%80%BC%E5%8D%B4%E6%8A%8A%E5%85%A8%E9%83%A8%E7%9A%84%E5%80%BC%E9%83%BD%E4%BF%AE%E6%94%B9%E4%BA%86/"/>
-    <id>http://yoursite.com/2019/02/20/【Python】列表嵌套字典修改字典里面的一个值却把全部的值都修改了/</id>
-    <published>2019-02-20T11:54:25.000Z</published>
-    <updated>2019-02-20T11:57:01.054Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;具体问题就是：当我往空列表里面添加字典，需要修改其中的一个键的值的时候，出现把其他同类的值也修改了。&lt;/p&gt;
-&lt;p&gt;下面就是出现问题的代码：&lt;br&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
   </entry>
