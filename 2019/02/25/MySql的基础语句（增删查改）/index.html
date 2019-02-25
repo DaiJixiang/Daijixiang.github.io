@@ -22,8 +22,8 @@
   <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
   <script>
     (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
+        if('123456'){
+            if (prompt('请输入文章密码') !== '123456'){
                 alert('密码错误');
                 history.back();
             }
@@ -117,17 +117,17 @@
 
 
 
-<meta name="description" content="1、什么是ArrayListArrayList就是传说中的动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了如下一些好处：动态的增加和减少元素实现了ICollection和IList接口灵活的设置数组的大小 2、如何使用ArrayList最简单的例子：ArrayList List = new ArrayList();for( int i=0;i &amp;lt;10;i++ ) //给数组增">
+<meta name="description" content="1.数据库驱动：Driver加载mysql驱动：Class.forName(“com.mysql.jdbc.Driver”); 加载oracle驱动：Class.forName(“oracle.jdbc.driver.OracleDriver”); 加载相应的驱动需要导入相应的包，如MySQL则需要导入：mysql-connector-java-5.1.13-bin.jar 否则无法正常执行。 2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中动态数组ArrayList类的用法">
-<meta property="og:url" content="http://yoursite.com/2019/02/21/Java中动态数组ArrayList类的用法/index.html">
+<meta property="og:title" content="MySql的基础语句（增删查改）">
+<meta property="og:url" content="http://yoursite.com/2019/02/25/MySql的基础语句（增删查改）/index.html">
 <meta property="og:site_name" content="左岸de博客">
-<meta property="og:description" content="1、什么是ArrayListArrayList就是传说中的动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了如下一些好处：动态的增加和减少元素实现了ICollection和IList接口灵活的设置数组的大小 2、如何使用ArrayList最简单的例子：ArrayList List = new ArrayList();for( int i=0;i &amp;lt;10;i++ ) //给数组增">
+<meta property="og:description" content="1.数据库驱动：Driver加载mysql驱动：Class.forName(“com.mysql.jdbc.Driver”); 加载oracle驱动：Class.forName(“oracle.jdbc.driver.OracleDriver”); 加载相应的驱动需要导入相应的包，如MySQL则需要导入：mysql-connector-java-5.1.13-bin.jar 否则无法正常执行。 2">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-22T13:54:12.836Z">
+<meta property="og:updated_time" content="2019-02-25T01:07:56.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中动态数组ArrayList类的用法">
-<meta name="twitter:description" content="1、什么是ArrayListArrayList就是传说中的动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了如下一些好处：动态的增加和减少元素实现了ICollection和IList接口灵活的设置数组的大小 2、如何使用ArrayList最简单的例子：ArrayList List = new ArrayList();for( int i=0;i &amp;lt;10;i++ ) //给数组增">
+<meta name="twitter:title" content="MySql的基础语句（增删查改）">
+<meta name="twitter:description" content="1.数据库驱动：Driver加载mysql驱动：Class.forName(“com.mysql.jdbc.Driver”); 加载oracle驱动：Class.forName(“oracle.jdbc.driver.OracleDriver”); 加载相应的驱动需要导入相应的包，如MySQL则需要导入：mysql-connector-java-5.1.13-bin.jar 否则无法正常执行。 2">
 
 
 
@@ -157,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/21/Java中动态数组ArrayList类的用法/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/25/MySql的基础语句（增删查改）/">
 
 
 
 
 
-  <title>Java中动态数组ArrayList类的用法 | 左岸de博客</title>
+  <title>MySql的基础语句（增删查改） | 左岸de博客</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/21/Java中动态数组ArrayList类的用法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/25/MySql的基础语句（增删查改）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DaiJixiang">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java中动态数组ArrayList类的用法</h1>
+          <h1 class="post-title" itemprop="name headline">MySql的基础语句（增删查改）</h1>
         
 
         <div class="post-meta">
@@ -353,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-21T15:15:14+08:00">
-                2019-02-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T09:00:18+08:00">
+                2019-02-25
               </time>
             
 
@@ -369,8 +369,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-22T21:54:12+08:00">
-                2019-02-22
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T09:07:56+08:00">
+                2019-02-25
               </time>
             
           </span>
@@ -388,8 +388,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
+                  <a href="/categories/java-mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">java-mysql</span>
                   </a>
                 </span>
 
@@ -424,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.4k 字
+                  926 字
                 </span>
               
 
@@ -440,7 +440,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -461,35 +461,28 @@
       
 
       
-        <h1 id="1、什么是ArrayList"><a href="#1、什么是ArrayList" class="headerlink" title="1、什么是ArrayList"></a>1、什么是ArrayList</h1><p>ArrayList就是传说中的动态数组，用MSDN中的说法，就是Array的复杂版本，它提供了如下一些好处：<br>动态的增加和减少元素<br>实现了ICollection和IList接口<br>灵活的设置数组的大小</p>
-<h1 id="2、如何使用ArrayList"><a href="#2、如何使用ArrayList" class="headerlink" title="2、如何使用ArrayList"></a>2、如何使用ArrayList</h1><p>最简单的例子：<br>ArrayList List = new ArrayList();<br>for( int i=0;i &lt;10;i++ ) //给数组增加10个Int元素<br>List.Add(i);<br>//..程序做一些处理<br>List.RemoveAt(5);//将第6个元素移除<br>for( int i=0;i &lt;3;i++ ) //再增加3个元素<br>List.Add(i+20);<br>Int32[] values = (Int32[])List.ToArray(typeof(Int32));//返回ArrayList包含的数组</p>
-<p>这是一个简单的例子，虽然没有包含ArrayList所有的方法，但是可以反映出ArrayList最常用的用法</p>
-<h1 id="3、ArrayList重要的方法和属性"><a href="#3、ArrayList重要的方法和属性" class="headerlink" title="3、ArrayList重要的方法和属性"></a>3、ArrayList重要的方法和属性</h1><h2 id="1）构造器"><a href="#1）构造器" class="headerlink" title="1）构造器"></a>1）构造器</h2><p>ArrayList提供了三个构造器：<br>public ArrayList();<br>默认的构造器，将会以默认（16）的大小来初始化内部的数组<br>public ArrayList(ICollection);<br>用一个ICollection对象来构造，并将该集合的元素添加到ArrayList<br>public ArrayList(int);<br>用指定的大小来初始化内部的数组</p>
-<h2 id="2）IsSynchronized属性和ArrayList-Synchronized方法"><a href="#2）IsSynchronized属性和ArrayList-Synchronized方法" class="headerlink" title="2）IsSynchronized属性和ArrayList.Synchronized方法"></a>2）IsSynchronized属性和ArrayList.Synchronized方法</h2><p>IsSynchronized属性指示当前的ArrayList实例是否支持线程同步，而ArrayList.Synchronized静态方法则会返回一个ArrayList的线程同步的封装。<br>如果使用非线程同步的实例，那么在多线程访问的时候，需要自己手动调用lock来保持线程同步，例如：<br>ArrayList list = new ArrayList();<br>//…<br>lock( list.SyncRoot ) //当ArrayList为非线程包装的时候，SyncRoot属性其实就是它自己，但是为了满足ICollection的SyncRoot定义，这里还是使用SyncRoot来保持源代码的规范性<br>{<br>list.Add( “Add a Item” );<br>}</p>
-<p>如果使用ArrayList.Synchronized方法返回的实例，那么就不用考虑线程同步的问题，这个实例本身就是线程安全的，实际上ArrayList内部实现了一个保证线程同步的内部类，ArrayList.Synchronized返回的就是这个类的实例，它里面的每个属性都是用了lock关键字来保证线程同步。</p>
-<h2 id="3）Count属性和Capacity属性"><a href="#3）Count属性和Capacity属性" class="headerlink" title="3）Count属性和Capacity属性"></a>3）Count属性和Capacity属性</h2><p>Count属性是目前ArrayList包含的元素的数量，这个属性是只读的。<br>Capacity属性是目前ArrayList能够包含的最大数量，可以手动的设置这个属性，但是当设置为小于Count值的时候会引发一个异常。</p>
-<h2 id="4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange"><a href="#4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange" class="headerlink" title="4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange"></a>4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange</h2><p>这几个方法比较类似<br>Add方法用于添加一个元素到当前列表的末尾<br>AddRange方法用于添加一批元素到当前列表的末尾<br>Remove方法用于删除一个元素，通过元素本身的引用来删除<br>RemoveAt方法用于删除一个元素，通过索引值来删除<br>RemoveRange用于删除一批元素，通过指定开始的索引和删除的数量来删除<br>Insert用于添加一个元素到指定位置，列表后面的元素依次往后移动<br>InsertRange用于从指定位置开始添加一批元素，列表后面的元素依次往后移动</p>
-<p>另外，还有几个类似的方法：<br><strong>Clear方法用于清除现有所有的元素</strong> （2019-2-21标记）<br>Contains方法用来查找某个对象在不在列表之中</p>
-<p>其他的我就不一一累赘了，大家可以查看MSDN，上面讲的更仔细 </p>
-<h2 id="5）TrimSize方法"><a href="#5）TrimSize方法" class="headerlink" title="5）TrimSize方法"></a>5）TrimSize方法</h2><p>这个方法用于将ArrayList固定到实际元素的大小，当动态数组元素确定不在添加的时候，可以调用这个方法来释放空余的内存。<br>6）ToArray方法<br>这个方法把ArrayList的元素Copy到一个新的数组中。</p>
-<h1 id="4、ArrayList与数组转换"><a href="#4、ArrayList与数组转换" class="headerlink" title="4、ArrayList与数组转换"></a>4、ArrayList与数组转换</h1><h2 id="例1："><a href="#例1：" class="headerlink" title="例1："></a>例1：</h2><p>ArrayList List = new ArrayList();<br>List.Add(1);<br>List.Add(2);<br>List.Add(3);</p>
-<p>Int32[] values = (Int32[])List.ToArray(typeof(Int32));</p>
-<h2 id="例2："><a href="#例2：" class="headerlink" title="例2："></a>例2：</h2><p>ArrayList List = new ArrayList();<br>List.Add(1);<br>List.Add(2);<br>List.Add(3);</p>
-<p>Int32[] values = new Int32[List.Count];<br>List.CopyTo(values);</p>
-<p>上面介绍了两种从ArrayList转换到数组的方法</p>
-<h2 id="例3："><a href="#例3：" class="headerlink" title="例3："></a>例3：</h2><p>ArrayList List = new ArrayList();<br>List.Add( “string” );<br>List.Add( 1 );<br>//往数组中添加不同类型的元素</p>
-<p>object[] values = List.ToArray(typeof(object)); //正确<br>string[] values = (string[])List.ToArray(typeof(string)); //错误</p>
-<p>和数组不一样，因为可以转换为Object数组，所以往ArrayList里面添加不同类型的元素是不会出错的，但是当调用ArrayList方法的时候，要么传递所有元素都可以正确转型的类型或者Object类型，否则将会抛出无法转型的异常。</p>
-<h1 id="5、ArrayList最佳使用建议"><a href="#5、ArrayList最佳使用建议" class="headerlink" title="5、ArrayList最佳使用建议"></a>5、ArrayList最佳使用建议</h1><p>这一节我们来讨论ArrayList与数组的差别，以及ArrayList的效率问题 </p>
-<h2 id="1）ArrayList是Array的复杂版本"><a href="#1）ArrayList是Array的复杂版本" class="headerlink" title="1）ArrayList是Array的复杂版本"></a>1）ArrayList是Array的复杂版本</h2><p>ArrayList内部封装了一个Object类型的数组，从一般的意义来说，它和数组没有本质的差别，甚</p>
-<p>定到实际元素的大小，当动态数组元素确定不在添加的时候，可以调用这个方法来释放空余的内存。 </p>
-<h2 id="6）ToArray方法"><a href="#6）ToArray方法" class="headerlink" title="6）ToArray方法"></a>6）ToArray方法</h2><p>这个方法把ArrayList的元素Copy到一个新的数组中。 </p>
-<p>和数组不一样，因为可以转换为Object数组，所以往ArrayList里面添加不同类型的元素是不会出错的，但是当调用ArrayList方法的时候，要么传递所有元素都可以正确转型的类型或者Object类型，否则将会抛出无法转型的异常。</p>
-<hr>
-<p>ArrayList实现反转<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">public</span> class TTEST &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">		ArrayList&lt;<span class="keyword">String</span>&gt; arr = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">String</span>&gt;();</span><br><span class="line">		<span class="built_in">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;++i)&#123;</span><br><span class="line">			arr.add(<span class="string">"str"</span>+i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">for</span> (<span class="keyword">String</span> <span class="keyword">string</span> : arr) &#123;</span><br><span class="line">			System.out.<span class="built_in">print</span>(<span class="keyword">string</span>+<span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.<span class="built_in">println</span>();</span><br><span class="line">		Collections.reverse(arr);</span><br><span class="line">		<span class="built_in">for</span> (<span class="keyword">String</span> <span class="keyword">string</span> : arr) &#123;</span><br><span class="line">			System.out.<span class="built_in">print</span>(<span class="keyword">string</span>+<span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>via <em><a href="https://blog.csdn.net/weixin_40165325/article/details/79198304" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40165325/article/details/79198304</a></em></li>
-</ul>
+        <h3 id="1-数据库驱动：Driver"><a href="#1-数据库驱动：Driver" class="headerlink" title="1.数据库驱动：Driver"></a>1.数据库驱动：Driver</h3><p>加载mysql驱动：Class.forName(“com.mysql.jdbc.Driver”);</p>
+<p>加载oracle驱动：Class.forName(“oracle.jdbc.driver.OracleDriver”);</p>
+<p>加载相应的驱动需要导入相应的包，如MySQL则需要导入：mysql-connector-java-5.1.13-bin.jar</p>
+<p>否则无法正常执行。</p>
+<h3 id="2-获取数据库链接：Connection"><a href="#2-获取数据库链接：Connection" class="headerlink" title="2.获取数据库链接：Connection"></a>2.获取数据库链接：Connection</h3><p>Connetion类主要用来链接数据库，常通过DriverManager.getConnection()来获取一个连接对象。<br>这里有3个参数，分别是url，user，passwrod。对应的是要链接的数据库，用户名，密码等。如：<br>url=jdbc:mysql://localhost:3306/jdbc?useUnicode=true&amp;characterEncoding=utf-8<br>user=root<br>password=root</p>
+<h3 id="3-执行sql语句：Statement"><a href="#3-执行sql语句：Statement" class="headerlink" title="3.执行sql语句：Statement"></a>3.执行sql语句：Statement</h3><p>Statement对象用于执行sql语句，有以下3种：</p>
+<p>（1）Statement对象用于执行不带参数的简单的SQL语句；</p>
+<p>（2）PerparedStatement对象用于执行带或不带参数的预编译SQL语句；</p>
+<p>（3）CallableStatement对象用于执行对数据库已存储过程的调用；</p>
+<p>   Statement的常用方法：</p>
+<p>（1）executeQuery()方法：运行查询语句，返回ReaultSet对象。</p>
+<p>（2）executeUpdata()方法：运行增，删，改操作，返回更新的行数。</p>
+<p>（3）addBatch(String sql) ：把多条sql语句放到一个批处理中。</p>
+<p>（4）executeBatch()：向数据库发送一批sql语句执行。</p>
+<h3 id="4-结果集：ResultSet"><a href="#4-结果集：ResultSet" class="headerlink" title="4.结果集：ResultSet"></a>4.结果集：ResultSet</h3><p>执行executeQuery()方法后返回的结果集</p>
+<p>  常用方法：<br>（1）getString(String columnName)：获得当前行的某一string类型的字段<br>（2）getFloat(String columnName)：获得当前行的某一string类型的字段<br>（3）getDate(String columnName)：获得当前行的某一date类型的字段<br>（4）getBoolean(String columnName)：获得在当前行的某一Boolean类型的字段<br>（5）getObject(String columnName)：获取当前行的某一任意类型的字段<br>（6）next()：移动到下一行</p>
+<h3 id="实际代码"><a href="#实际代码" class="headerlink" title="实际代码"></a>实际代码</h3><p>首先建立一个配置文件，内容如下：</p>
+<p> #数据库驱动<br>driver=com.mysql.jdbc.Driver</p>
+<p>#连接数据库的URL<br>url=jdbc:mysql://localhost:3306/jdbc?useUnicode=true&amp;characterEncoding=utf-8</p>
+<p>#用户名<br>user=root</p>
+<p>#密码<br>password=root<br>接着写一个连接数据库的通用工具类：<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DBUtil</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> driver;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> url;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> user;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">String</span> password;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//读取配置文件</span></span><br><span class="line">			InputStream <span class="keyword">in</span> = DBUtil.class.getResourceAsStream(<span class="string">"db.properties"</span>);</span><br><span class="line">			Properties properties = <span class="keyword">new</span> <span class="type">Properties</span>();</span><br><span class="line">			<span class="comment">//加载配置文件</span></span><br><span class="line">			properties.load(<span class="keyword">in</span>);</span><br><span class="line">			<span class="comment">//获取配置文件中的数据</span></span><br><span class="line">			driver = properties.getProperty(<span class="string">"driver"</span>);</span><br><span class="line">			url = properties.getProperty(<span class="string">"url"</span>);</span><br><span class="line">			user = properties.getProperty(<span class="string">"user"</span>);</span><br><span class="line">			password = properties.getProperty(<span class="string">"password"</span>);</span><br><span class="line">			<span class="comment">//加载数据库链接驱动</span></span><br><span class="line">			Class.forName(driver);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取一个数据库链接</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> Connection getConnection() throws SQLException&#123;</span><br><span class="line">		<span class="keyword">return</span> DriverManager.getConnection(url, user, password);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现简单的增删改查：<br><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> class jdbcTest &#123;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 创建表</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> createTable() <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">		<span class="keyword">String</span> sql = <span class="string">"CREATE TABLE IF NOT EXISTS `user`("</span></span><br><span class="line">			     +<span class="string">"`id` INT UNSIGNED AUTO_INCREMENT,"</span></span><br><span class="line">			  	 +<span class="string">" `user_name` VARCHAR(100),"</span></span><br><span class="line">			  	 +<span class="string">" `user_password` VARCHAR(100),"</span></span><br><span class="line">			  	 +<span class="string">" `user_age` INT(11),"</span></span><br><span class="line">			  	 +<span class="string">"PRIMARY KEY ( `id` )"</span></span><br><span class="line">			  	 +<span class="string">")ENGINE=InnoDB DEFAULT CHARSET=utf8;"</span>;</span><br><span class="line">		Connection conn = DBUtil.getConnection();</span><br><span class="line">		<span class="comment">//开启事务</span></span><br><span class="line">		conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">		PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">		preparedStatement.executeUpdate();</span><br><span class="line">		<span class="comment">//提交事务</span></span><br><span class="line">		conn.commit();</span><br><span class="line">		<span class="comment">//要注意关闭连接（在实际中最好不要像这样关闭，最好标准一点）</span></span><br><span class="line">		conn.close();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 增加数据</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="built_in">add</span>() <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">		<span class="keyword">String</span> sql = <span class="string">"INSERT INTO USER (user_name,user_password,user_age) VALUES('老王','123456',18)"</span>;</span><br><span class="line">		Connection conn = DBUtil.getConnection();</span><br><span class="line">		conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">		PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">		preparedStatement.executeUpdate();</span><br><span class="line">		conn.commit();</span><br><span class="line">		conn.close();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 删除数据</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> delete() <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">		<span class="keyword">String</span> sql = <span class="string">"DELETE FROM USER WHERE USER.user_name = '老王'"</span>;</span><br><span class="line">		Connection conn = DBUtil.getConnection();</span><br><span class="line">		conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">		PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">		preparedStatement.executeUpdate();</span><br><span class="line">		conn.commit();</span><br><span class="line">		conn.close();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 修改数据</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> updata() <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">		<span class="keyword">String</span> sql = <span class="string">"UPDATE USER SET USER.user_name = '老李'"</span>;</span><br><span class="line">		Connection conn = DBUtil.getConnection();</span><br><span class="line">		conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">		PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">		preparedStatement.executeUpdate();</span><br><span class="line">		conn.commit();</span><br><span class="line">		conn.close();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 查找数据</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> query() <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">		<span class="keyword">String</span> sql = <span class="string">"SELECT * FROM USER"</span>;</span><br><span class="line">		Connection conn = DBUtil.getConnection();</span><br><span class="line">		conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">		PreparedStatement preparedStatement = conn.prepareStatement(sql);</span><br><span class="line">		<span class="comment">//执行查询语句并返回结果集</span></span><br><span class="line">		ResultSet resultSet = preparedStatement.executeQuery();</span><br><span class="line">		<span class="keyword">while</span> (resultSet.next()) &#123;</span><br><span class="line">			<span class="comment">//注意：这里要与数据库里的字段对应</span></span><br><span class="line">			<span class="keyword">String</span> username = resultSet.getString(<span class="string">"user_name"</span>);</span><br><span class="line">			<span class="keyword">String</span> password = resultSet.getString(<span class="string">"user_password"</span>);</span><br><span class="line">			<span class="keyword">String</span> age = resultSet.getString(<span class="string">"user_age"</span>);</span><br><span class="line">			System.out.<span class="built_in">println</span>(username + <span class="string">" "</span> + password + <span class="string">" "</span> + age);</span><br><span class="line">		&#125;</span><br><span class="line">		conn.commit();</span><br><span class="line">		conn.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -514,8 +507,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/21/CentOS-基本操作/" rel="next" title="CentOS 基本操作">
-                <i class="fa fa-chevron-left"></i> CentOS 基本操作
+              <a href="/2019/02/24/mysql连接问题/" rel="next" title="mysql连接问题">
+                <i class="fa fa-chevron-left"></i> mysql连接问题
               </a>
             
           </div>
@@ -523,10 +516,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/21/java代码实现栈/" rel="prev" title="java代码实现栈">
-                java代码实现栈 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -714,7 +703,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1、什么是ArrayList"><span class="nav-number">1.</span> <span class="nav-text">1、什么是ArrayList</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2、如何使用ArrayList"><span class="nav-number">2.</span> <span class="nav-text">2、如何使用ArrayList</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、ArrayList重要的方法和属性"><span class="nav-number">3.</span> <span class="nav-text">3、ArrayList重要的方法和属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1）构造器"><span class="nav-number">3.1.</span> <span class="nav-text">1）构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2）IsSynchronized属性和ArrayList-Synchronized方法"><span class="nav-number">3.2.</span> <span class="nav-text">2）IsSynchronized属性和ArrayList.Synchronized方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3）Count属性和Capacity属性"><span class="nav-number">3.3.</span> <span class="nav-text">3）Count属性和Capacity属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange"><span class="nav-number">3.4.</span> <span class="nav-text">4）Add、AddRange、Remove、RemoveAt、RemoveRange、Insert、InsertRange</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5）TrimSize方法"><span class="nav-number">3.5.</span> <span class="nav-text">5）TrimSize方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4、ArrayList与数组转换"><span class="nav-number">4.</span> <span class="nav-text">4、ArrayList与数组转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例1："><span class="nav-number">4.1.</span> <span class="nav-text">例1：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例2："><span class="nav-number">4.2.</span> <span class="nav-text">例2：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例3："><span class="nav-number">4.3.</span> <span class="nav-text">例3：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5、ArrayList最佳使用建议"><span class="nav-number">5.</span> <span class="nav-text">5、ArrayList最佳使用建议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1）ArrayList是Array的复杂版本"><span class="nav-number">5.1.</span> <span class="nav-text">1）ArrayList是Array的复杂版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6）ToArray方法"><span class="nav-number">5.2.</span> <span class="nav-text">6）ToArray方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数据库驱动：Driver"><span class="nav-number">1.</span> <span class="nav-text">1.数据库驱动：Driver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-获取数据库链接：Connection"><span class="nav-number">2.</span> <span class="nav-text">2.获取数据库链接：Connection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-执行sql语句：Statement"><span class="nav-number">3.</span> <span class="nav-text">3.执行sql语句：Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-结果集：ResultSet"><span class="nav-number">4.</span> <span class="nav-text">4.结果集：ResultSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际代码"><span class="nav-number">5.</span> <span class="nav-text">实际代码</span></a></li></ol></div>
             
 
           </div>
