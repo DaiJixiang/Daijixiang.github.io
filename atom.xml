@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-25T01:14:59.943Z</updated>
+  <updated>2019-02-25T01:21:01.134Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/02/25/MySql%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5%EF%BC%88%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9%EF%BC%89/"/>
     <id>http://yoursite.com/2019/02/25/MySql的基础语句（增删查改）/</id>
     <published>2019-02-25T01:00:18.000Z</published>
-    <updated>2019-02-25T01:14:59.943Z</updated>
+    <updated>2019-02-25T01:21:01.134Z</updated>
     
     <summary type="html">
     
@@ -35,7 +35,7 @@
     
     </summary>
     
-      <category term="java-mysql" scheme="http://yoursite.com/categories/java-mysql/"/>
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
   </entry>
