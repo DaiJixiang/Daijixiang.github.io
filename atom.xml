@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-24T10:42:30.765Z</updated>
+  <updated>2019-06-25T00:32:41.361Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/24/1.1Python/"/>
-    <id>http://yoursite.com/2019/06/24/1.1Python/</id>
-    <published>2019-06-24T10:40:48.974Z</published>
-    <updated>2019-06-24T10:42:30.765Z</updated>
+    <title>1.1-python</title>
+    <link href="http://yoursite.com/2019/06/25/1.1-python/"/>
+    <id>http://yoursite.com/2019/06/25/1.1-python/</id>
+    <published>2019-06-25T00:31:22.000Z</published>
+    <updated>2019-06-25T00:32:41.361Z</updated>
     
     <summary type="html">
     
@@ -34,6 +34,8 @@
       
     
     </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
   </entry>
