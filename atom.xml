@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-25T00:32:41.361Z</updated>
+  <updated>2019-06-25T07:13:29.258Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1.2-python</title>
+    <link href="http://yoursite.com/2019/06/25/1-2-python/"/>
+    <id>http://yoursite.com/2019/06/25/1-2-python/</id>
+    <published>2019-06-25T00:43:04.000Z</published>
+    <updated>2019-06-25T07:13:29.258Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h5&gt;&lt;p&gt;在[]内，可以存储多个任意类型的值&lt;br&gt;以逗号分开&lt;/p&gt;
+&lt;p&gt;列表可以使用和字符串相同的操作&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>1.1-python</title>
@@ -468,30 +487,6 @@
     </summary>
     
       <category term="java" scheme="http://yoursite.com/categories/java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Dos命令大全</title>
-    <link href="http://yoursite.com/2019/02/21/Dos%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
-    <id>http://yoursite.com/2019/02/21/Dos命令大全/</id>
-    <published>2019-02-21T10:40:55.000Z</published>
-    <updated>2019-02-21T10:41:55.189Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;基础命令&lt;br&gt;1
-        
-      
-    
-    </summary>
-    
-      <category term="基础" scheme="http://yoursite.com/categories/%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
