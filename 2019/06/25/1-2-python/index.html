@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="左岸de博客">
 <meta property="og:description" content="列表在[]内，可以存储多个任意类型的值以逗号分开 列表可以使用和字符串相同的操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-25T07:13:29.258Z">
+<meta property="og:updated_time" content="2019-06-25T07:57:38.683Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.2-python">
 <meta name="twitter:description" content="列表在[]内，可以存储多个任意类型的值以逗号分开 列表可以使用和字符串相同的操作">
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-25T15:13:29+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-25T15:57:38+08:00">
                 2019-06-25
               </time>
             
@@ -492,7 +492,6 @@
 <p>注释：用来声明函数的作用</p>
 <p>return：返回给调用者的值</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义函数的三种形式：</span></span><br><span class="line"><span class="comment"># 无参函数（不需要接收外部传入的参数），有参函数（需要接收外部传入的参数），空函数（pass）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    user = input(<span class="string">'请输入用户名：'</span>).strip()</span><br><span class="line">    pwd = input(<span class="string">'请输入密码：'</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> user == <span class="string">'jack'</span> <span class="keyword">and</span> pwd == <span class="string">'123'</span>:</span><br><span class="line">        print(<span class="string">'login success'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'login error'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数的内存地址</span></span><br><span class="line">print(login)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数调用</span></span><br><span class="line">login()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有参函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(username, password)</span>:</span></span><br><span class="line">    user = input(<span class="string">'请输入用户名：'</span>).strip()</span><br><span class="line">    pwd = input(<span class="string">'请输入密码：'</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> user == username <span class="keyword">and</span> pwd == password:</span><br><span class="line">        print(<span class="string">'login success'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'login error'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数的时候需要传入参数，否则会报错</span></span><br><span class="line">login(<span class="string">'jack'</span>, <span class="string">'123'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 空函数</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">ATM:</span></span><br><span class="line"><span class="string">    1、登录</span></span><br><span class="line"><span class="string">    2、注册</span></span><br><span class="line"><span class="string">    3、提现</span></span><br><span class="line"><span class="string">    4、取款</span></span><br><span class="line"><span class="string">    5、转账</span></span><br><span class="line"><span class="string">    6、还款</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 代表什么都不做</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<hr>
 
       
     </div>
@@ -526,6 +525,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/26/1-3python/" rel="prev" title="1-3python">
+                1-3python <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -604,7 +607,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -796,7 +799,7 @@ show_date_time();
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共38.6k字</span>
+  <span class="post-count">博客全站共40.2k字</span>
 </div>
 
 
